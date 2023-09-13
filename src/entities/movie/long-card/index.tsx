@@ -1,0 +1,1 @@
+export { MovieLongCard } from "./ui";

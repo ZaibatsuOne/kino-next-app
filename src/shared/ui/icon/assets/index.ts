@@ -1,6 +1,7 @@
 import filmsIcon from "./navigation/films.svg";
 import homeIcon from "./navigation/home.svg";
 import logo from "./navigation/logo.svg";
+import manda from "./movies/mandalorian.png";
 import monsterWorkBg from "./movies/monsterWork.png";
 import moovieBgCover from "./movies/cover.png";
 import movieName from "./movies/luka.png";
@@ -17,5 +18,6 @@ export {
   searchIcon,
   moovieBgCover,
   movieName,
+  manda,
   monsterWorkBg,
 };

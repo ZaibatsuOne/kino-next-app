@@ -1,0 +1,1 @@
+export { InTrendCategory } from "./ui";
