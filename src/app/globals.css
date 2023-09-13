@@ -71,7 +71,7 @@
     @apply border-border;
   }
   body {
-    @apply bg-orange-500 text-white;
+    @apply bg-[#1A1D29] text-white;
   }
 }
 

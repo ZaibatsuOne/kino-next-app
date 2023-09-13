@@ -19,7 +19,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={cn("container", font.className)}>
+      <body className={cn("", font.className)}>
         <Header />
         {children}
       </body>

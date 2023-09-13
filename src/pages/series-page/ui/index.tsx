@@ -5,6 +5,7 @@ export const SeriesPage: FC = () => {
   return (
     <main>
       <Hero />
+      <p>dsfsdff</p>
     </main>
   );
 };

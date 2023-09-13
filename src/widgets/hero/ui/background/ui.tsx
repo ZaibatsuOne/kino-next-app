@@ -1,19 +1,18 @@
 import { FC } from "react";
 import Image from "next/image";
-import { monsterWorkBg } from "@/shared/ui/icon/assets";
+import bgCover from "@/shared/ui/icon/assets/movies/monsterWork.png";
 import { moovieBgCover } from "@/shared/ui/icon/assets";
 
 export const Background: FC = () => {
   return (
-    <Image
-      priority
-      quality={100}
-      fill
-      sizes="100%"
-      src={moovieBgCover}
-      alt="top day moovie"
-      className="absolute  -z-10"
-      objectFit="cover"
-    />
+    <div className="relative h-[800px] -top-28 w-full object-cover overflow-hidden">
+      <Image
+        priority
+        quality={100}
+        src={moovieBgCover}
+        alt="top day movie"
+        className=""
+      />
+    </div>
   );
 };
