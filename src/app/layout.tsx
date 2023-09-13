@@ -8,8 +8,8 @@ import { cn } from "@/lib/utils";
 const font = Work_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Disney - movie app",
-  description: "Streaming movie app service",
+  title: "Disney - Фильмы и сериалы",
+  description: "Стриминговая платформа для просмотра фильма и сериалов",
 };
 
 export default function RootLayout({
