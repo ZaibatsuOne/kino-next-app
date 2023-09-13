@@ -21,7 +21,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={cn("container", font.className)}>
         <Header />
-        <main>{children}</main>
+        {children}
       </body>
     </html>
   );

@@ -5,7 +5,7 @@ import { SearchButton } from "./search-button";
 
 export const Header: FC = () => {
   return (
-    <header className="flex items-center justify-between py-4">
+    <header className="relative z-[1] flex items-center justify-between py-4">
       <div className="flex gap-6 items-center">
         <Logo />
         <Navigation />

@@ -1,1 +1,1 @@
-import * as navigation from "./assets/index";
+import * as images from "./assets/index";
