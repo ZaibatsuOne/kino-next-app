@@ -11,7 +11,7 @@ export const Background: FC = ({ movie }) => {
       const playList = splitUrl[splitUrl.length - 1];
       return (
         <iframe
-          className="absolute inset-0 w-full h-[800px] scale-150"
+          className="absolute -z-20 inset-0 w-full h-[800px] scale-150"
           src={`${firstVideoUrl}?autoplay=1&loop=1&mute=1&playlist=${playList}&vq=hd1080&showinfo=0&modestbranding=1$rel=0`}
         />
       );

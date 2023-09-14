@@ -9,7 +9,7 @@ export const SeriesPage: FC = (props) => {
   return (
     <main>
       <Hero movie={movie} />
-      <section className="flex flex-col gap-14 container">
+      <section className="flex flex-col gap-10 container">
         <InTrendCategory movie={movie} />
         <PopularSerials popularSerials={popularSerials} />
         <RussianSerials rusSerials={rusSerials} />
