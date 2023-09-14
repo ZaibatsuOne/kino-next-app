@@ -8,6 +8,9 @@ const nextConfig = {
       {
         hostname: "imagetmdb.com",
       },
+      {
+        hostname: "st.kp.yandex.net",
+      },
     ],
   },
 };
