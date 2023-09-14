@@ -2,13 +2,14 @@ import { Title, type TitleProps } from "@/shared/ui";
 import { FC, PropsWithChildren } from "react";
 import { ICategoryCarousel } from "./config";
 import { Carousel } from "@/shared/ui/carousel/ui";
+import { cn } from "@/shared/lib/utils";
 
 interface Props extends PropsWithChildren {
   className?: string;
 }
 
 export const Category: FC<Props> = ({ children, className }) => {
-  return <section>{children}</section>;
+  return <section className={cn("", className)}>{children}</section>;
 };
 
 export const CategoryCarousel: FC<ICategoryCarousel> = ({
@@ -20,7 +21,7 @@ export const CategoryCarousel: FC<ICategoryCarousel> = ({
 };
 
 export const CategoryTitle: FC<TitleProps> = ({ children, className }) => {
-  return <Title className={className}>{children}</Title>;
+  return <Title className={cn("mb-6", className)}>{children}</Title>;
 };
 
 // export const CategoryItem: FC = () => {};
