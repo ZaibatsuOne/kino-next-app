@@ -1,0 +1,1 @@
+export { queryPopularSerials } from "./querySetting";

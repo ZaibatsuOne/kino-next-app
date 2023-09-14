@@ -7,6 +7,5 @@ export const getFilm = async () => {
 };
 export default async function Home() {
   const movie = await getFilm();
-  console.log(movie);
   return <HomePage movie={movie} />;
 }

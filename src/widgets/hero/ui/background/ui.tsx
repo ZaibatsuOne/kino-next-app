@@ -2,10 +2,10 @@ import { FC } from "react";
 import Image from "next/image";
 
 export const Background: FC = ({ movie }) => {
-  const firstVideo = movie?.videos?.trailers[3];
-  const firstVideoUrl = firstVideo?.url;
+  const firstVideo: string = movie?.videos?.trailers[3];
+  const firstVideoUrl: string = firstVideo?.url;
 
-  const checkMovie = (firstVideoUrl, movie) => {
+  const checkMovie = (firstVideoUrl: string, movie) => {
     if (firstVideoUrl) {
       const splitUrl = firstVideoUrl?.split("/");
       const playList = splitUrl[splitUrl.length - 1];
