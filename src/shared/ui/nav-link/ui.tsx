@@ -1,7 +1,7 @@
 import { FC, PropsWithChildren } from "react";
 import Link, { LinkProps } from "next/link";
 
-import { cn } from "@/lib/utils";
+import { cn } from "@/shared/lib/utils";
 
 interface Props extends LinkProps {
   className?: string;

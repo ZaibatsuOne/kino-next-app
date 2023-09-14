@@ -1,4 +1,4 @@
-import { cn } from "@/lib/utils";
+import { cn } from "@/shared/lib/utils";
 import { Title, type TitleProps } from "@/shared/ui";
 import { FC, PropsWithChildren } from "react";
 import { ICategoryCarousel } from "./config";
