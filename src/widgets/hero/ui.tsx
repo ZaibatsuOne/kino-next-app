@@ -18,10 +18,10 @@ export const Hero: FC = ({ movie }) => {
       </div>
       <Background movie={movie} />
       <div className="container">
-        <div className=" absolute flex flex-col gap-8 z-10 top-[18%] w-1/2">
+        <div className=" absolute flex flex-col gap-8 z-10 bottom-[20%] w-1/2">
           <div className="flex flex-col gap-5">
-            {movieLogo && (
-              <Image src={movieLogo} alt="" width={700} height={200} />
+            {Boolean(movieLogo) && (
+              <Image src={movieLogo} alt="" width={500} height={200} />
             )}
             <Description movie={movie} />
           </div>

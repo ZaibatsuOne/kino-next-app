@@ -5,6 +5,9 @@ const nextConfig = {
       {
         hostname: "avatars.mds.yandex.net",
       },
+      {
+        hostname: "imagetmdb.com",
+      },
     ],
   },
 };

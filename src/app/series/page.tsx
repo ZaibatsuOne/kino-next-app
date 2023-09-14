@@ -4,7 +4,7 @@ import { SeriesPage } from "@/pages/series-page";
 import movieService from "@/shared/api/movie.service";
 
 export const getMovies = async () => {
-  const { data } = await movieService.getById(1395801);
+  const { data } = await movieService.getById(1118138);
   return data;
 };
 
@@ -15,7 +15,6 @@ export const metadata: Metadata = {
 
 export const Page: FC = async () => {
   const movie = await getMovies();
-  console.log(movie);
   return <SeriesPage movie={movie} />;
 };
 
