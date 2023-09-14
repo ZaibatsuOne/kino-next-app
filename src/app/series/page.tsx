@@ -29,7 +29,7 @@ export const Page: FC = async () => {
   const movie = await getMovies();
   const popularSerials = await getPopularSerials();
   const rusSerials = await getRussianSerials();
-  console.log(rusSerials);
+
   return (
     <SeriesPage
       movie={movie}

@@ -14,7 +14,7 @@ export const MovieLongCard: FC = (props) => {
           className="object-cover h-full"
         />
       ) : (
-        <span>fdf</span>
+        <span>Forbidden</span>
       )}
     </article>
   );
