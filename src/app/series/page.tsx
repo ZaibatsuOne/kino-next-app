@@ -4,9 +4,15 @@ import { SeriesPage } from "@/pages/series-page";
 import { kp } from "@/shared/api/baseApi";
 import movieService from "@/shared/api/movie.service";
 import { queryPopularSerials } from "@/shared/api";
+import { queryRusSerials } from "@/shared/api/querySetting";
+
+export const getRussianSerials = async () => {
+  const { data } = await kp.movie.getByFilters(queryRusSerials);
+  return data;
+};
 
 export const getMovies = async () => {
-  const { data } = await movieService.getById(404900);
+  const { data } = await movieService.getById(478052);
   return data;
 };
 
@@ -22,8 +28,15 @@ export const metadata: Metadata = {
 export const Page: FC = async () => {
   const movie = await getMovies();
   const popularSerials = await getPopularSerials();
-  console.log(popularSerials);
-  return <SeriesPage movie={movie} popularSerials={popularSerials} />;
+  const rusSerials = await getRussianSerials();
+  console.log(rusSerials);
+  return (
+    <SeriesPage
+      movie={movie}
+      popularSerials={popularSerials}
+      rusSerials={rusSerials}
+    />
+  );
 };
 
 export default Page;

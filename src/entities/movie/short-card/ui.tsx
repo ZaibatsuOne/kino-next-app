@@ -8,18 +8,20 @@ export const MovieShortCard: FC = (props) => {
   const { movie } = props;
   return (
     <Link href="#">
-      <Card className="w-60 h-32 flex items-center justify-center overflow-hidden border-[#353843] bg-black">
-        {movie && (
+      <Card className="w-60 h-32 overflow-hidden border-[#353843] bg-black">
+        {movie ? (
           <Image
             src={movie.poster.url}
             width={400}
             height={200}
             priority
             alt=""
+            className="object-cover w-full h-full"
           />
+        ) : (
+          <span>Forbidden</span>
         )}
       </Card>
-      {movie.name}
     </Link>
   );
 };
