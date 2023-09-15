@@ -13,7 +13,7 @@ export const getRussianSerials = async () => {
 };
 
 export const getMovies = async () => {
-  const { data } = await movieService.getById(478052);
+  const { data } = await movieService.getById(464963);
   return data;
 };
 
@@ -37,7 +37,6 @@ export const Page: FC = async () => {
   const rusSerials = await getRussianSerials();
   const newSerials = await getNewSerials();
 
-  console.log(newSerials);
   return (
     <SeriesPage
       movie={movie}
