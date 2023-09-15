@@ -32,9 +32,10 @@ export const Carousel: FC<Props> = ({ children, className }) => {
     >
       {children}
       <div className="slider-controler flex items-center">
-        {[...Array(5)].map((_, index) => {
+        {[...Array(2)].map((_, index) => {
           return (
             <div
+              key={index}
               className={cn(
                 `backdrop-blur-xl rounded-2xl slider-arrow text-2xl`,
                 index === 0 ? "swiper-button-prev" : "swiper-button-next"

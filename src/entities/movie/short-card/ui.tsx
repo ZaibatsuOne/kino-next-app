@@ -2,13 +2,17 @@ import { Card } from "@/shared/ui";
 import { FC } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { MovieDtoV13 } from "@openmoviedb/kinopoiskdev_client";
 
-export const MovieShortCard: FC = (props) => {
+interface Props {
+  movie: MovieDtoV13;
+}
+export const MovieShortCard: FC<Props> = (props) => {
   const { movie } = props;
   return (
     // <Link href="#">
     <Card className="w-full h-40 overflow-hidden border-[#353843] bg-black">
-      {movie ? (
+      {movie?.poster?.url ? (
         <Image
           src={movie.poster.url}
           width={400}

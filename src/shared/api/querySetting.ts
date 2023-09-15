@@ -8,12 +8,11 @@ import {
 const queryBuilder = new MovieQueryBuilder();
 
 export const queryPopularSerials = queryBuilder
-  .select(["name", "backdrop.url", "poster.url"])
+  .select(["name", "id", "poster.url"])
   .filterRange("year", [2019, 2023])
   .filterRange("rating.kp", [6, 10])
   .filterExact("name", SPECIAL_VALUE.NOT_NULL)
   .filterExact("poster.url", SPECIAL_VALUE.NOT_NULL)
-
   .filterExact("isSeries", true)
   .paginate(1, 10)
   .build();
@@ -26,7 +25,7 @@ export const queryPopularSerials = queryBuilder
 //   .build();
 
 export const queryRusSerials: Filter<MovieFields> = {
-  selectFields: ["name", "poster.url"],
+  selectFields: ["id", "name", "poster.url"],
   year: "2021-2023",
   "poster.url": "!null",
   name: "!null",
@@ -35,6 +34,20 @@ export const queryRusSerials: Filter<MovieFields> = {
   ageRating: "18-80",
   sortField: "premiere.russia",
   sortType: ["-1"],
+  page: 1,
+  limit: 10,
+};
+
+export const queryNewSerials: Filter<MovieFields> = {
+  selectFields: ["id", "name", "poster.url"],
+  year: "2023-2023",
+  "poster.url": "!null",
+  name: "!null",
+  "rating.kp": "7-10",
+  ageRating: "16-80",
+  sortField: "premiere.world",
+  sortType: "-1",
+  isSeries: true,
   page: 1,
   limit: 10,
 };

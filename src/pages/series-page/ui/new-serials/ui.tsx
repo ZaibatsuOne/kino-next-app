@@ -11,16 +11,15 @@ import { MovieShortCard } from "@/entities/movie";
 import { SwiperSlide } from "swiper/react";
 
 interface Props {
-  rusSerials: MovieDocsResponseDtoV13 | null;
+  newSerials: MovieDocsResponseDtoV13 | null;
 }
-export const RussianSerials: FC<Props> = (props) => {
-  const { rusSerials } = props;
-
+export const NewSerials: FC<Props> = (props) => {
+  const { newSerials } = props;
   return (
     <Category>
-      <CategoryTitle>Российские сериалы</CategoryTitle>
+      <CategoryTitle>Новые сериалы</CategoryTitle>
       <CategoryCarousel>
-        {rusSerials?.docs?.map((item: MovieDtoV13) => (
+        {newSerials?.docs?.map((item: MovieDtoV13) => (
           <SwiperSlide key={item.id}>
             <MovieShortCard movie={item} />
           </SwiperSlide>
