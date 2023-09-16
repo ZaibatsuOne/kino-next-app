@@ -1,11 +1,10 @@
-import { queryNewSerials, queryRusSerials } from "@/shared/api/querySetting";
-
-import { FC } from "react";
-import { Metadata } from "next";
 import { SeriesPage } from "@/pages/series-page";
+import { queryPopularSerials } from "@/shared/api";
 import { kp } from "@/shared/api/baseApi";
 import movieService from "@/shared/api/movie.service";
-import { queryPopularSerials } from "@/shared/api";
+import { queryNewSerials, queryRusSerials } from "@/shared/api/querySetting";
+import { Metadata } from "next";
+import { FC } from "react";
 
 export const getRussianSerials = async () => {
   const { data } = await kp.movie.getByFilters(queryRusSerials);
@@ -27,8 +26,8 @@ export const getNewSerials = async () => {
   return data;
 };
 export const metadata: Metadata = {
-  title: "Disney - Сериалы",
   description: "Смотреть онлайн сериалы Disney",
+  title: "Disney - Сериалы",
 };
 
 export const Page: FC = async () => {
@@ -40,9 +39,9 @@ export const Page: FC = async () => {
   return (
     <SeriesPage
       movie={movie}
+      newSerials={newSerials}
       popularSerials={popularSerials}
       rusSerials={rusSerials}
-      newSerials={newSerials}
     />
   );
 };

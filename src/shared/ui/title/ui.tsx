@@ -1,6 +1,5 @@
-import { FC, PropsWithChildren } from "react";
-
 import { cn } from "@/shared/lib/utils";
+import { FC, PropsWithChildren } from "react";
 
 export interface TitleProps extends PropsWithChildren {
   className?: string;

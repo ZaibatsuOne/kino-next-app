@@ -1,9 +1,10 @@
 import { Button } from "@/shared/ui";
-import { FC } from "react";
 import { Play } from "lucide-react";
+import { FC } from "react";
+
 export const WatchFilmButton: FC = () => {
   return (
-    <Button variant="secondary" className="gap-1">
+    <Button className="gap-1" variant="secondary">
       <Play />
       <span>Смотреть</span>
     </Button>
