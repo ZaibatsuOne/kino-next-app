@@ -1,6 +1,6 @@
 import { Button } from "@/shared/ui";
-import { FC } from "react";
 import { Info } from "lucide-react";
+import { FC } from "react";
 
 export const InformationFilmButton: FC = () => {
   return (

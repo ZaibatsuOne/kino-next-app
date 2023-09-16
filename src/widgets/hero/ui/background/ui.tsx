@@ -1,6 +1,6 @@
 import { MovieDtoV13, Video } from "@openmoviedb/kinopoiskdev_client";
-
 import { FC } from "react";
+
 import { checkMovie } from ".";
 
 interface Props {
@@ -9,7 +9,7 @@ interface Props {
 export const Background: FC<Props> = (props) => {
   const { movie } = props;
 
-  const firstVideo: Video | undefined = movie?.videos?.trailers?.[3];
+  const firstVideo: undefined | Video = movie?.videos?.trailers?.[3];
 
   const firstVideoUrl: string | undefined = firstVideo?.url;
 

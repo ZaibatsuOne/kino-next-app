@@ -1,13 +1,12 @@
 "use client";
 
+import { MovieShortCard } from "@/entities/movie";
 import { Category, CategoryCarousel, CategoryTitle } from "@/widgets/category";
 import {
   MovieDocsResponseDtoV13,
   MovieDtoV13,
 } from "@openmoviedb/kinopoiskdev_client";
-
 import { FC } from "react";
-import { MovieShortCard } from "@/entities/movie";
 import { SwiperSlide } from "swiper/react";
 
 interface Props {

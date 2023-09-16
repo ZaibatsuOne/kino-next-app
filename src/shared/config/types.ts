@@ -12,8 +12,8 @@ export interface IMovieDocs {
 
 export interface IMoviePreview {
   docs: IMovieDocs[];
-  total: number;
   limit: number;
   page: number;
   pages: number;
+  total: number;
 }

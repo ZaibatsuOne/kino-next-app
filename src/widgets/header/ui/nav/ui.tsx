@@ -1,7 +1,7 @@
-import { FC } from "react";
-import Image from "next/image";
-import Link from "next/link";
 import { NavLink } from "@/shared/ui";
+import Image from "next/image";
+import { FC } from "react";
+
 import { items } from ".";
 
 export const Navigation: FC = () => {
@@ -10,8 +10,8 @@ export const Navigation: FC = () => {
       <ul className="flex">
         {items.map((item) => (
           <li key={item.text}>
-            <NavLink href={item.href} className="py-3 px-4">
-              <Image src={item.icon} alt={item.text} />
+            <NavLink className="py-3 px-4" href={item.href}>
+              <Image alt={item.text} src={item.icon} />
               <span className="pt-1">{item.text}</span>
             </NavLink>
           </li>

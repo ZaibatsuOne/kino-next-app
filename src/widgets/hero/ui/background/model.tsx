@@ -1,5 +1,5 @@
-import Image from "next/image";
 import { MovieDtoV13 } from "@openmoviedb/kinopoiskdev_client";
+import Image from "next/image";
 
 export const checkMovie = (firstVideoUrl: string, movie: MovieDtoV13) => {
   if (firstVideoUrl) {
@@ -16,12 +16,12 @@ export const checkMovie = (firstVideoUrl: string, movie: MovieDtoV13) => {
       <>
         {movie?.backdrop?.url ? (
           <Image
-            src={movie?.backdrop?.url}
             alt="Movie poster"
-            objectFit="cover"
             fill
+            objectFit="cover"
             priority
             quality={100}
+            src={movie?.backdrop?.url}
           />
         ) : (
           <span>Forbidden</span>

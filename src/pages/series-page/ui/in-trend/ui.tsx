@@ -1,12 +1,11 @@
 "use client";
 
-import { Category, CategoryCarousel, CategoryTitle } from "@/widgets/category";
-import { FC, useEffect, useState } from "react";
 import { MovieLongCard, MovieShortCard } from "@/entities/movie";
-import { MovieQueryBuilder, SORT_TYPE } from "@openmoviedb/kinopoiskdev_client";
-
 import { kp } from "@/shared/api/baseApi";
 import { usePopularMovies } from "@/shared/lib/store";
+import { Category, CategoryCarousel, CategoryTitle } from "@/widgets/category";
+import { MovieQueryBuilder, SORT_TYPE } from "@openmoviedb/kinopoiskdev_client";
+import { FC, useEffect, useState } from "react";
 
 export const InTrendCategory: FC = () => {
   return (

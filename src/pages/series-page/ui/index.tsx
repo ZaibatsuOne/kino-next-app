@@ -1,24 +1,23 @@
+import { Hero } from "@/widgets/hero";
 import {
-  MovieDocsResponseDtoV1,
   MovieDocsResponseDtoV13,
   MovieDtoV13,
 } from "@openmoviedb/kinopoiskdev_client";
+import { NextPage } from "next";
 
-import { FC } from "react";
-import { Hero } from "@/widgets/hero";
 import { InTrendCategory } from "./in-trend/ui";
-import { NewSerials } from "./new-serials/ui";
+import { NewSerials } from "./new-serials";
 import { PopularSerials } from "./popular-serials";
-import { RussianSerials } from "./russian-serials/ui";
+import { RussianSerials } from "./russian-serials";
 
 interface Props {
   movie: MovieDtoV13 | null;
-  rusSerials: MovieDocsResponseDtoV13 | null;
   newSerials: MovieDocsResponseDtoV13 | null;
   popularSerials: MovieDocsResponseDtoV13 | null;
+  rusSerials: MovieDocsResponseDtoV13 | null;
 }
-export const SeriesPage: FC<Props> = (props) => {
-  const { movie, popularSerials, rusSerials, newSerials } = props;
+export const SeriesPage: NextPage<Props> = (props) => {
+  const { movie, newSerials, popularSerials, rusSerials } = props;
   return (
     <main>
       <Hero movie={movie} />

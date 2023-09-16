@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@next/eslint-plugin-next": "^13.4.19",
     "@openmoviedb/kinopoiskdev_client": "^1.3.10",
     "@radix-ui/react-slot": "^1.0.2",
     "@types/node": "20.6.0",
@@ -33,6 +34,9 @@
     "zustand": "^4.4.1"
   },
   "devDependencies": {
-    "@types/react-slick": "^0.23.10"
+    "@types/react-slick": "^0.23.10",
+    "eslint": "^8.49.0",
+    "eslint-config-next": "13.4.19",
+    "eslint-plugin-perfectionist": "^2.1.0"
   }
 }

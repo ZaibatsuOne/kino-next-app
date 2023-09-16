@@ -1,5 +1,5 @@
-import { FC } from "react";
 import { MovieDtoV13 } from "@openmoviedb/kinopoiskdev_client";
+import { FC } from "react";
 
 interface Props {
   movie: MovieDtoV13 | null;

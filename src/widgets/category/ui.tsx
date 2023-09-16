@@ -1,8 +1,9 @@
-import { Title, type TitleProps } from "@/shared/ui";
-import { FC, PropsWithChildren } from "react";
-import { ICategoryCarousel } from "./config";
-import { Carousel } from "@/shared/ui/carousel/ui";
 import { cn } from "@/shared/lib/utils";
+import { Title, type TitleProps } from "@/shared/ui";
+import { Carousel } from "@/shared/ui/carousel/ui";
+import { FC, PropsWithChildren } from "react";
+
+import { ICategoryCarousel } from "./config";
 
 interface Props extends PropsWithChildren {
   className?: string;
@@ -13,9 +14,9 @@ export const Category: FC<Props> = ({ children, className }) => {
 };
 
 export const CategoryCarousel: FC<ICategoryCarousel> = ({
-  item,
   children,
   className,
+  item,
 }) => {
   return <Carousel className={className}>{children}</Carousel>;
 };

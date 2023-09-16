@@ -1,3 +1,4 @@
+import { paths } from "@/shared/routing";
 import {
   filmsIcon,
   homeIcon,
@@ -5,27 +6,25 @@ import {
   seriesIcon,
 } from "@/shared/ui/icon/assets";
 
-import { paths } from "@/shared/routing";
-
 export const items = [
   {
+    href: paths.home,
     icon: homeIcon,
     text: "Главная",
-    href: paths.home,
   },
   {
+    href: paths.series,
     icon: seriesIcon,
     text: "Сериалы",
-    href: paths.series,
   },
   {
+    href: paths.films,
     icon: filmsIcon,
     text: "Фильмы",
-    href: paths.films,
   },
   {
+    href: paths.originals,
     icon: originsIcon,
     text: "Оригинальное",
-    href: paths.originals,
   },
 ];

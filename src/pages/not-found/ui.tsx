@@ -1,11 +1,10 @@
 "use client";
 
-import { ArrowLeftFromLine, Undo2 } from "lucide-react";
-
 import { Button } from "@/shared/ui";
 import { Icon404 } from "@/shared/ui/icon/assets";
-import Image from "next/image";
+import { ArrowLeftFromLine } from "lucide-react";
 import { NextPage } from "next";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 
 export const NotFound: NextPage = () => {
@@ -14,9 +13,9 @@ export const NotFound: NextPage = () => {
     <section className="flex justify-center transform translate-y-1/3">
       <div className="w-[65%] flex gap-20">
         <Image
-          src={Icon404}
           alt="Капитан Джек Воробей"
           className="opacity-80"
+          src={Icon404}
         />
         <div className="flex flex-col justify-between">
           <div className="flex flex-col gap-1 ">
@@ -28,10 +27,10 @@ export const NotFound: NextPage = () => {
             </h3>
           </div>
           <Button
-            variant="secondary"
-            size="lg"
-            onClick={(): void => router.back()}
             className="gap-2"
+            onClick={(): void => router.back()}
+            size="lg"
+            variant="secondary"
           >
             <ArrowLeftFromLine />
             <span>Назад</span>

@@ -1,11 +1,11 @@
-import { FC } from "react";
-import Image from "next/image";
 import { searchIcon } from "@/shared/ui/icon/assets";
+import Image from "next/image";
+import { FC } from "react";
 
-export const SearchButton = () => {
+export const SearchButton: FC = () => {
   return (
     <button className="flex gap-2 items-center">
-      <Image src={searchIcon} alt="search button" />
+      <Image alt="search button" src={searchIcon} />
       <span>Поиск</span>
     </button>
   );

@@ -9,13 +9,14 @@ class MovieService {
   }
   async getNewMovies() {
     const query: Filter<MovieFields> = {
+      limit: LIMIT,
       "rating.kp": "5-9",
-      year: 2023,
       sortField: "votes.filmCritics",
       sortType: "-1",
-      limit: LIMIT,
+      year: 2023,
     };
   }
 }
 
+// eslint-disable-next-line import/no-anonymous-default-export
 export default new MovieService();

@@ -1,10 +1,11 @@
+import { InformationFilmButton } from "@/features/film/information/ui";
+import { WatchFilmButton } from "@/features/film/watch/ui";
+import { MovieDtoV13 } from "@openmoviedb/kinopoiskdev_client";
+import Image from "next/image";
+import { FC } from "react";
+
 import { Background } from "./ui/background";
 import { Description } from "./ui/description";
-import { FC } from "react";
-import Image from "next/image";
-import { InformationFilmButton } from "@/features/film/information/ui";
-import { MovieDtoV13 } from "@openmoviedb/kinopoiskdev_client";
-import { WatchFilmButton } from "@/features/film/watch/ui";
 
 interface Props {
   movie: MovieDtoV13 | null;
@@ -24,7 +25,7 @@ export const Hero: FC<Props> = ({ movie }) => {
         <div className=" absolute flex flex-col gap-8 z-10 bottom-[20%] w-1/2">
           <div className="flex flex-col gap-5">
             {movieLogo ? (
-              <Image src={movieLogo} alt="" width={500} height={200} />
+              <Image alt="" height={200} src={movieLogo} width={500} />
             ) : (
               <span>Forbidden</span>
             )}

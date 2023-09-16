@@ -1,15 +1,16 @@
-import "./globals.css";
-
-import { Header } from "@/widgets/header";
 import type { Metadata } from "next";
-import { Work_Sans } from "next/font/google";
+
 import { cn } from "@/shared/lib/utils";
+import { Header } from "@/widgets/header";
+import { Work_Sans } from "next/font/google";
+
+import "./globals.css";
 
 const font = Work_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Disney - Фильмы и сериалы",
   description: "Стриминговая платформа для просмотра фильма и сериалов",
+  title: "Disney - Фильмы и сериалы",
 };
 
 export default function RootLayout({
