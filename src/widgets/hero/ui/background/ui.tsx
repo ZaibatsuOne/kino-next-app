@@ -10,7 +10,6 @@ export const Background: FC<Props> = (props) => {
   const { movie } = props;
 
   const firstVideo: undefined | Video = movie?.videos?.trailers?.[3];
-
   const firstVideoUrl: string | undefined = firstVideo?.url;
 
   return (

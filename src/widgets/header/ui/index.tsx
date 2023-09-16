@@ -1,6 +1,7 @@
-import { FC } from "react";
 import { Logo } from "@/shared/ui/logo";
-import { Navigation } from "./nav";
+import { FC } from "react";
+
+import { Navigation } from "./nav/ui";
 import { SearchButton } from "./search-button";
 
 export const Header: FC = () => {

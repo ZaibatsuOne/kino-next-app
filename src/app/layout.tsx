@@ -10,7 +10,7 @@ const font = Work_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   description: "Стриминговая платформа для просмотра фильма и сериалов",
-  title: "Disney - Фильмы и сериалы",
+  title: "KinoNext - Фильмы и сериалы",
 };
 
 export default function RootLayout({

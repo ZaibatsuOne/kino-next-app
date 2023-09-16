@@ -1,30 +1,25 @@
 import { paths } from "@/shared/routing";
-import {
-  filmsIcon,
-  homeIcon,
-  originsIcon,
-  seriesIcon,
-} from "@/shared/ui/icon/assets";
+import { Film, Home, Star, Tv } from "lucide-react";
 
 export const items = [
   {
     href: paths.home,
-    icon: homeIcon,
+    icon: Home,
     text: "Главная",
   },
   {
     href: paths.series,
-    icon: seriesIcon,
+    icon: Tv,
     text: "Сериалы",
   },
   {
     href: paths.films,
-    icon: filmsIcon,
+    icon: Film,
     text: "Фильмы",
   },
   {
     href: paths.originals,
-    icon: originsIcon,
+    icon: Star,
     text: "Оригинальное",
   },
 ];

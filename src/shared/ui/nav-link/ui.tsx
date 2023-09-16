@@ -1,14 +1,13 @@
-import { FC, PropsWithChildren } from "react";
-import Link, { LinkProps } from "next/link";
-
 import { cn } from "@/shared/lib/utils";
+import Link, { LinkProps } from "next/link";
+import { FC, PropsWithChildren } from "react";
 
 interface Props extends LinkProps {
   className?: string;
 }
 
 export const NavLink: FC<PropsWithChildren<Props>> = (props) => {
-  const { href, className, children, ...otherProps } = props;
+  const { children, className, href, ...otherProps } = props;
 
   return (
     <Link
