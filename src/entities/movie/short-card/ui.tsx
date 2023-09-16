@@ -11,7 +11,7 @@ export const MovieShortCard: FC<Props> = (props) => {
   const { movie } = props;
   return (
     // <Link href="#">
-    <Card className="w-full h-40 overflow-hidden border-[#353843] bg-black">
+    <Card className="w-full h-40  border-[#353843] bg-black rounded-2xl">
       {movie?.poster?.url ? (
         <Image
           src={movie.poster.url}
@@ -19,7 +19,7 @@ export const MovieShortCard: FC<Props> = (props) => {
           height={200}
           priority
           alt=""
-          className="h-full w-full object-cover"
+          className="h-full w-full object-cover rounded-2xl"
         />
       ) : (
         <span>Forbidden</span>

@@ -1,12 +1,16 @@
+"use client";
+
 import * as React from "react";
 
 import { cn } from "@/shared/lib/utils";
+import { motion } from "framer-motion";
 
 const Card = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => (
-  <div
+  <motion.div
+    whileHover={{ scale: 1.1 }}
     ref={ref}
     className={cn(
       "rounded-lg border bg-card text-card-foreground shadow-sm",
