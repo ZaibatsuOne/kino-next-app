@@ -15,11 +15,20 @@ export const MovieLength = (
   seasons: number
 ) => {
   if (movie.isSeries === true) {
-    return (
-      <span>
-        {seasons === 1 ? <p>{seasons} сезон</p> : <p>{seasons} сезонов</p>}
-      </span>
-    );
+    if (seasons === 1 || seasons % 10 === 1) {
+      return <p>{seasons} сезон</p>;
+    } else if (
+      seasons === 2 ||
+      seasons === 3 ||
+      seasons === 4 ||
+      seasons % 10 === 2 ||
+      seasons % 10 === 3 ||
+      seasons % 10 === 4
+    ) {
+      return <p>{seasons} сезона</p>;
+    } else {
+      return <p>{seasons} сезонов</p>;
+    }
   } else {
     return (
       <span>

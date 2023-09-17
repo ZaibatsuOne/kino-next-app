@@ -3,7 +3,7 @@ import { Hero } from "@/widgets/hero";
 import { Metadata, NextPage } from "next";
 
 export const getMovies = async () => {
-  const { data } = await movieService.getById(404900);
+  const { data } = await movieService.getById(723959);
   return data;
 };
 
