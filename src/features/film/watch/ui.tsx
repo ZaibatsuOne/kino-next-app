@@ -1,12 +1,18 @@
 import { Button } from "@/shared/ui";
 import { Play } from "lucide-react";
+import Link from "next/link";
 import { FC } from "react";
 
-export const WatchFilmButton: FC = () => {
+interface Props {
+  link: number | undefined;
+}
+export const WatchFilmButton: FC<Props> = ({ link }) => {
   return (
-    <Button className="gap-1" variant="secondary">
-      <Play />
-      <span>Смотреть</span>
-    </Button>
+    <Link href={`/movie/${link}`}>
+      <Button className="gap-1" variant="secondary">
+        <Play />
+        <span>Смотреть</span>
+      </Button>
+    </Link>
   );
 };

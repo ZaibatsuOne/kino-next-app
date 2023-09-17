@@ -29,12 +29,12 @@ export const Hero: FC<Props> = ({ movie }) => {
             {movieLogo ? (
               <Image alt="" height={200} src={movieLogo} width={500} />
             ) : (
-              <span>Forbidden</span>
+              <h2 className="text-7xl font-extrabold">{movie?.name}</h2>
             )}
             <Description movie={movie} />
           </div>
           <div className="flex gap-6">
-            <WatchFilmButton />
+            <WatchFilmButton link={movie?.id} />
             <InformationFilmButton />
           </div>
         </div>

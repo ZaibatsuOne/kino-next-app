@@ -1,7 +1,6 @@
 import movieService from "@/shared/api/movie.service";
 import { Hero } from "@/widgets/hero";
-import { Metadata } from "next";
-import { FC } from "react";
+import { Metadata, NextPage } from "next";
 
 export const getMovies = async () => {
   const { data } = await movieService.getById(464963);
@@ -13,7 +12,7 @@ export const metadata: Metadata = {
   title: "Disney - Сериалы",
 };
 
-export const Page: FC = async () => {
+export const Page: NextPage = async () => {
   const movie = await getMovies();
 
   return <Hero movie={movie} />;

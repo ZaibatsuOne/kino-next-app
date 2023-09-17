@@ -15,7 +15,7 @@ export const MovieLongCard: FC<Props> = (props) => {
   const { movie } = props;
 
   return (
-    <Link href="#">
+    <Link href={`/movie/${movie.id}`}>
       <motion.div className="relative group" whileHover={{ scale: 1.07 }}>
         <Hover movie={movie} />
         <article

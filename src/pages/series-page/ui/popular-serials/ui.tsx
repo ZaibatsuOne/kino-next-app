@@ -16,7 +16,7 @@ export const PopularSerials: FC<Props> = (props) => {
       <CategoryTitle>Популярные сериалы</CategoryTitle>
       <section className="grid grid-cols-5 gap-5">
         {movies?.docs.map((movie: MovieDtoV13) => (
-          <MovieLongCard key={movie.id} movie={movie} />
+          <MovieLongCard key={movie.id} movie={movie} category="series" />
         ))}
       </section>
     </Category>
