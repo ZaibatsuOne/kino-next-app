@@ -4,7 +4,7 @@ import { MovieDtoV13 } from "@openmoviedb/kinopoiskdev_client";
 import { Metadata, NextPage } from "next";
 
 export const getMovies = async () => {
-  const { data } = await movieService.getById(5364390);
+  const { data } = await movieService.getById(79848);
   return data;
 };
 

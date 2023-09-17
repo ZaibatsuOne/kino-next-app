@@ -9,7 +9,7 @@ import { Description } from "./ui/description";
 import { Info } from "./ui/info";
 
 interface Props {
-  movie: MovieDtoV13;
+  movie: MovieDtoV13 | null;
 }
 export const Hero: FC<Props> = ({ movie }) => {
   const movieLogo: string | undefined = movie?.logo?.url;

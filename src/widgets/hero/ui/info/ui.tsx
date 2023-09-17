@@ -5,13 +5,13 @@ import { FC } from "react";
 import { MovieAgeRating, MovieLength } from ".";
 
 interface Props {
-  movie: MovieDtoV13;
+  movie: MovieDtoV13 | null;
 }
 
 export const Info: FC<Props> = ({ movie }) => {
-  const movieLengthHours: number = getMovieHours(movie);
-  const movieLengthMin: number = getMovieMin(movie);
-  const seasons = getMovieSeasons(movie);
+  const movieLengthHours: null | number = getMovieHours(movie);
+  const movieLengthMin: null | number = getMovieMin(movie);
+  const seasons: null | number | undefined = getMovieSeasons(movie);
 
   return (
     <div className="flex flex-col gap-4">
