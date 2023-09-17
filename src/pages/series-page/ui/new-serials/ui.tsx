@@ -10,17 +10,17 @@ import { FC } from "react";
 import { SwiperSlide } from "swiper/react";
 
 interface Props {
-  newSerials: MovieDocsResponseDtoV13 | null;
+  movies: MovieDocsResponseDtoV13 | null;
 }
 export const NewSerials: FC<Props> = (props) => {
-  const { newSerials } = props;
+  const { movies } = props;
   return (
     <Category>
       <CategoryTitle>Новые сериалы</CategoryTitle>
       <CategoryCarousel className="overflow-visible">
-        {newSerials?.docs?.map((item: MovieDtoV13) => (
-          <SwiperSlide key={item.id}>
-            <MovieShortCard movie={item} />
+        {movies?.docs?.map((movie: MovieDtoV13) => (
+          <SwiperSlide key={movie.id}>
+            <MovieShortCard movie={movie} />
           </SwiperSlide>
         ))}
       </CategoryCarousel>

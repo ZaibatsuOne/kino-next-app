@@ -7,15 +7,15 @@ import {
 import { FC } from "react";
 
 interface Props {
-  popularSerials: MovieDocsResponseDtoV13 | null;
+  movies: MovieDocsResponseDtoV13 | null;
 }
 export const PopularSerials: FC<Props> = (props) => {
-  const { popularSerials } = props;
+  const { movies } = props;
   return (
     <Category>
       <CategoryTitle>Популярные сериалы</CategoryTitle>
       <section className="grid grid-cols-5 gap-5">
-        {popularSerials?.docs.map((movie: MovieDtoV13) => (
+        {movies?.docs.map((movie: MovieDtoV13) => (
           <MovieLongCard key={movie.id} movie={movie} />
         ))}
       </section>
