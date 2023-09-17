@@ -6,9 +6,10 @@ import { FC } from "react";
 
 import { Background } from "./ui/background";
 import { Description } from "./ui/description";
+import { Info } from "./ui/info";
 
 interface Props {
-  movie: MovieDtoV13 | null;
+  movie: MovieDtoV13;
 }
 export const Hero: FC<Props> = ({ movie }) => {
   const movieLogo: string | undefined = movie?.logo?.url;
@@ -24,18 +25,21 @@ export const Hero: FC<Props> = ({ movie }) => {
       </div>
       <Background movie={movie} />
       <div className="container">
-        <div className=" absolute flex flex-col gap-8 z-10 bottom-[20%] w-1/2">
-          <div className="flex flex-col gap-5">
+        <div className=" absolute flex flex-col gap-10 z-10 bottom-[20%] w-1/2">
+          <div className="flex flex-col gap-4">
             {movieLogo ? (
               <Image alt="" height={200} src={movieLogo} width={500} />
             ) : (
               <h2 className="text-7xl font-extrabold">{movie?.name}</h2>
             )}
-            <Description movie={movie} />
+            <Info movie={movie} />
           </div>
-          <div className="flex gap-6">
-            <WatchFilmButton link={movie?.id} />
-            <InformationFilmButton />
+          <div className="flex flex-col gap-6">
+            <div className="flex gap-6">
+              <WatchFilmButton link={movie?.id} />
+              <InformationFilmButton />
+            </div>
+            <Description movie={movie} />
           </div>
         </div>
       </div>
