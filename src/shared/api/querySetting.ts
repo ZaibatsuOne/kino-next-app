@@ -8,7 +8,7 @@ import {
 const queryBuilder = new MovieQueryBuilder();
 
 export const queryPopularSerials = queryBuilder
-  .select(["name", "id", "poster.url"])
+  .select(["name", "id", "poster.url", "description", "rating.kp", "ageRating"])
   .filterRange("year", [2019, 2023])
   .filterRange("rating.kp", [6, 10])
   .filterExact("name", SPECIAL_VALUE.NOT_NULL)
