@@ -1,9 +1,10 @@
 import movieService from "@/shared/api/movie.service";
 import { Hero } from "@/widgets/hero";
+import { MovieDtoV13 } from "@openmoviedb/kinopoiskdev_client";
 import { Metadata, NextPage } from "next";
 
 export const getMovies = async () => {
-  const { data } = await movieService.getById(5079093);
+  const { data } = await movieService.getById(5364390);
   return data;
 };
 
@@ -13,8 +14,7 @@ export const metadata: Metadata = {
 };
 
 export const Page: NextPage = async () => {
-  const movie = await getMovies();
-  console.log(movie?.seasonsInfo);
+  const movie: MovieDtoV13 | null = await getMovies();
   return <Hero movie={movie} />;
 };
 

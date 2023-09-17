@@ -11,7 +11,7 @@ interface Props {
 export const Info: FC<Props> = ({ movie }) => {
   const movieLengthHours: number = getMovieHours(movie);
   const movieLengthMin: number = getMovieMin(movie);
-  const seasons: number | null = getMovieSeasons(movie);
+  const seasons = getMovieSeasons(movie);
 
   return (
     <div className="flex flex-col gap-4">

@@ -28,7 +28,13 @@ export const Hero: FC<Props> = ({ movie }) => {
         <div className=" absolute flex flex-col gap-10 z-10 bottom-[20%] w-1/2">
           <div className="flex flex-col gap-4">
             {movieLogo ? (
-              <Image alt="" height={200} src={movieLogo} width={500} />
+              <Image
+                alt="Movie logo"
+                className="max-h-56 object-contain"
+                height={100}
+                src={movieLogo}
+                width={500}
+              />
             ) : (
               <h2 className="text-7xl font-extrabold">{movie?.name}</h2>
             )}

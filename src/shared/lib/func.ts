@@ -1,10 +1,14 @@
 import { MovieDtoV13, SeasonInfo } from "@openmoviedb/kinopoiskdev_client";
 
 export const getMovieSeasons = (movie: MovieDtoV13) => {
-  if (!movie.isSeries === undefined) {
-    const seasonCount: SeasonInfo =
-      movie?.seasonsInfo[movie.seasonsInfo?.length - 1];
-    return seasonCount.number;
+  if (!movie.isSeries === false) {
+    if (movie.seasonsInfo && movie.seasonsInfo.length > 0) {
+      const seasonCount: SeasonInfo =
+        movie.seasonsInfo[movie.seasonsInfo.length - 1];
+      return seasonCount.number;
+    } else {
+      return null;
+    }
   } else {
     return null;
   }
