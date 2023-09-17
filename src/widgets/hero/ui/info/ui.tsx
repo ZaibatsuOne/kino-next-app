@@ -11,14 +11,14 @@ interface Props {
 export const Info: FC<Props> = ({ movie }) => {
   const movieLengthHours: number = getMovieHours(movie);
   const movieLengthMin: number = getMovieMin(movie);
-  const seasons = getMovieSeasons(movie);
+  const seasons: number | null = getMovieSeasons(movie);
 
   return (
     <div className="flex flex-col gap-4">
       <div className="flex gap-2 items-center">
         {MovieAgeRating(movie)}
         <div>{movie?.year}</div>
-        <span>•</span>
+        {seasons !== null ? <span>•</span> : null}
         {MovieLength(movie, movieLengthHours, movieLengthMin, seasons)}
       </div>
       <div className="flex gap-2">

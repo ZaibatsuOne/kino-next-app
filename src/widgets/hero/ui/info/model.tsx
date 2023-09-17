@@ -26,6 +26,8 @@ export const MovieLength = (
       seasons % 10 === 4
     ) {
       return <p>{seasons} сезона</p>;
+    } else if (seasons === null) {
+      return null;
     } else {
       return <p>{seasons} сезонов</p>;
     }
