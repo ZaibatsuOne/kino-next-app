@@ -1,8 +1,7 @@
+import { MovieAgeRating, MovieLength } from "@/shared/lib";
 import { getMovieHours, getMovieMin, getMovieSeasons } from "@/shared/lib/func";
 import { MovieDtoV13 } from "@openmoviedb/kinopoiskdev_client";
 import { FC } from "react";
-
-import { MovieAgeRating, MovieLength } from ".";
 
 interface Props {
   movie: MovieDtoV13 | null;

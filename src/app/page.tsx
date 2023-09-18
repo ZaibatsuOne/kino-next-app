@@ -3,5 +3,6 @@ import { getMovieById } from "@/shared/api";
 
 export default async function Home() {
   const movie = await getMovieById(111543);
+
   return <HomePage movie={movie} />;
 }

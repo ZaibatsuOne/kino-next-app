@@ -32,3 +32,23 @@ export const MovieLength = (
     );
   }
 };
+
+export const MovieCountry = (movie: MovieDtoV13) => {
+  if (!movie || movie.countries === undefined || movie.countries?.length <= 0) {
+    return null;
+  }
+  return (
+    <ul className="flex items-center gap-2 text-sm">
+      {movie.countries.map((country) => (
+        <li key={country.name}>{country.name}</li>
+      ))}
+    </ul>
+  );
+};
+
+export const MovieYear = (movie: MovieDtoV13) => {
+  if (!movie || movie.year === undefined) {
+    return null;
+  }
+  return <span>{movie.year}</span>;
+};
