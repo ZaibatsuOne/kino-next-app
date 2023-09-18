@@ -8,17 +8,13 @@ interface Props {
 }
 
 export const Info: FC<Props> = ({ movie }) => {
-  const movieLengthHours: null | number = getMovieHours(movie);
-  const movieLengthMin: null | number = getMovieMin(movie);
-  const seasons: null | number | undefined = getMovieSeasons(movie);
-
   return (
     <div className="flex flex-col gap-4">
       <div className="flex gap-2 items-center">
         {MovieAgeRating(movie)}
         <div>{movie?.year}</div>
-        {seasons !== null ? <span>•</span> : null}
-        {MovieLength(movie, movieLengthHours, movieLengthMin, seasons)}
+        <span>•</span>
+        {MovieLength(movie)}
       </div>
       <div className="flex gap-2">
         {movie?.genres?.map((genre) => (

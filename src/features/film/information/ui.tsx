@@ -40,8 +40,8 @@ export const InformationFilmButton: FC<Props> = ({ movie }) => {
                 width={400}
               />
             ) : null}
-            <h3 className="absolute p-4 bottom-0 text-3xl font-bold">
-              {movie?.name}
+            <h3 className="absolute p-4 -bottom-6 text-3xl font-bold">
+              {movie?.name ? movie.name : null}
             </h3>
           </DialogTitle>
           <DialogDescription className="flex flex-col gap-3 p-4">
@@ -51,7 +51,7 @@ export const InformationFilmButton: FC<Props> = ({ movie }) => {
               {MovieYear(movie)}
               {MovieCountry(movie)}
             </div>
-            <div className="text-sm">{movie?.description}</div>
+            <div className="text-sm text-justify">{movie?.description}</div>
           </DialogDescription>
         </DialogHeader>
       </DialogContent>

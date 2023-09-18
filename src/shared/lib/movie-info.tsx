@@ -1,5 +1,7 @@
 import { MovieDtoV13 } from "@openmoviedb/kinopoiskdev_client";
 
+import { getMovieHours, getMovieMin, getMovieSeasons } from "./func";
+
 export const MovieAgeRating = (movie: MovieDtoV13 | null) => {
   return movie?.ageRating ? (
     <div className="flex items-center justify-center rounded-lg w-10 h-6 bg-[#31343E]">
@@ -9,11 +11,14 @@ export const MovieAgeRating = (movie: MovieDtoV13 | null) => {
 };
 
 export const MovieLength = (
-  movie: MovieDtoV13 | null,
-  movieLengthHours: null | number,
-  movieLengthMin: null | number,
-  seasons: null | number | undefined
+  movie: MovieDtoV13 | null
+  // movieLengthHours: null | number,
+  // movieLengthMin: null | number,
+  // seasons: null | number | undefined
 ) => {
+  const movieLengthHours: null | number = getMovieHours(movie);
+  const movieLengthMin: null | number = getMovieMin(movie);
+  const seasons: null | number | undefined = getMovieSeasons(movie);
   if (movie?.isSeries === true) {
     if (!seasons) {
       return null;
