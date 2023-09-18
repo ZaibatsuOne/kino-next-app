@@ -38,11 +38,12 @@ export const MovieCountry = (movie: MovieDtoV13) => {
     return null;
   }
   return (
-    <ul className="flex items-center gap-2 text-sm">
-      {movie.countries.map((country) => (
-        <li key={country.name}>{country.name}</li>
-      ))}
-    </ul>
+    // <ul className="flex items-center gap-2">
+    //   {movie.countries.map((country) => (
+    //     <li key={country.name}>{country.name}</li>
+    //   ))}
+    // </ul>
+    <span>{movie.countries[0].name}</span>
   );
 };
 

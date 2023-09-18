@@ -13,7 +13,7 @@ export const Description: FC<Props> = (props) => {
   return (
     <>
       {pathname === `/movie/${movie?.id}` ? (
-        <p className="text-lg">
+        <p className="text-base">
           {movie?.description ? (
             movie.description
           ) : (

@@ -50,7 +50,7 @@ export const InformationFilmButton: FC<Props> = ({ movie }) => {
             </h3>
           </DialogTitle>
           <DialogDescription className="flex flex-col gap-3 p-4">
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2 text-sm">
               <div>{isSeries ? <Popcorn /> : <Tv />}</div>
               {MovieAgeRating(movie)}
               {MovieYear(movie)}
