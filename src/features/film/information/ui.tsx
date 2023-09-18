@@ -57,7 +57,9 @@ export const InformationFilmButton: FC<Props> = ({ movie }) => {
               {MovieCountry(movie)}
               {MovieLength(movie)}
             </div>
-            <div className="text-base text-justify">{movie?.description}</div>
+            <div className="text-sm text-justify">
+              {movie?.shortDescription}
+            </div>
           </DialogDescription>
         </DialogHeader>
       </DialogContent>

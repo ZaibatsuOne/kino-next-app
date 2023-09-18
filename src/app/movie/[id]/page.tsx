@@ -1,5 +1,4 @@
 import { getMovieById } from "@/shared/api";
-import { Separator } from "@/shared/ui";
 import { ActorsList } from "@/widgets/actors";
 import { Hero } from "@/widgets/hero";
 import { Similliar } from "@/widgets/similliar";
