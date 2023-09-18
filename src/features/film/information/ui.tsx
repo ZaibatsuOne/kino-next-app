@@ -1,4 +1,9 @@
-import { MovieAgeRating, MovieCountry, MovieYear } from "@/shared/lib";
+import {
+  MovieAgeRating,
+  MovieCountry,
+  MovieLength,
+  MovieYear,
+} from "@/shared/lib";
 import {
   Button,
   Dialog,
@@ -50,6 +55,7 @@ export const InformationFilmButton: FC<Props> = ({ movie }) => {
               {MovieAgeRating(movie)}
               {MovieYear(movie)}
               {MovieCountry(movie)}
+              {MovieLength(movie)}
             </div>
             <div className="text-sm text-justify">{movie?.description}</div>
           </DialogDescription>

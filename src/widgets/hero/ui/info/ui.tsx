@@ -13,7 +13,7 @@ export const Info: FC<Props> = ({ movie }) => {
       <div className="flex gap-2 items-center">
         {MovieAgeRating(movie)}
         <div>{movie?.year}</div>
-        <span>•</span>
+        {MovieLength(movie) ? <span>•</span> : null}
         {MovieLength(movie)}
       </div>
       <div className="flex gap-2">

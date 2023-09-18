@@ -10,12 +10,7 @@ export const MovieAgeRating = (movie: MovieDtoV13 | null) => {
   ) : null;
 };
 
-export const MovieLength = (
-  movie: MovieDtoV13 | null
-  // movieLengthHours: null | number,
-  // movieLengthMin: null | number,
-  // seasons: null | number | undefined
-) => {
+export const MovieLength = (movie: MovieDtoV13 | null) => {
   const movieLengthHours: null | number = getMovieHours(movie);
   const movieLengthMin: null | number = getMovieMin(movie);
   const seasons: null | number | undefined = getMovieSeasons(movie);
