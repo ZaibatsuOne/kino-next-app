@@ -1,4 +1,5 @@
 import { getMovieById } from "@/shared/api";
+import { ActorsList } from "@/widgets/actors";
 import { Hero } from "@/widgets/hero";
 import { NextPage } from "next";
 
@@ -7,7 +8,12 @@ interface Props {
 }
 const MovieByIdPage: NextPage<Props> = async ({ params }) => {
   const movie = await getMovieById(params.id);
-  return <Hero movie={movie} />;
+  return (
+    <section>
+      <Hero movie={movie} />
+      <ActorsList movie={movie} />
+    </section>
+  );
 };
 
 export default MovieByIdPage;

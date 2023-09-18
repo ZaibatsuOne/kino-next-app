@@ -17,6 +17,7 @@ export const checkMovie = (firstVideoUrl: string, movie: MovieDtoV13) => {
         {movie?.backdrop?.url ? (
           <Image
             alt="Movie poster"
+            className="mix-blend-plus-lighter"
             fill
             objectFit="cover"
             priority
