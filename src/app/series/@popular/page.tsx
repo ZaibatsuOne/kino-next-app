@@ -1,14 +1,8 @@
 import { PopularSerials } from "@/pages/series-page/ui/popular-serials";
-import { queryPopularSerials } from "@/shared/api";
-import { kp } from "@/shared/api/baseApi";
-
-export const getMovie = async () => {
-  const { data } = await kp.movie.getByFilters(queryPopularSerials);
-  return data;
-};
+import { getPopularSeries } from "@/shared/api";
 
 const Popular = async () => {
-  const movies = await getMovie();
+  const movies = await getPopularSeries();
   return <PopularSerials movies={movies} />;
 };
 

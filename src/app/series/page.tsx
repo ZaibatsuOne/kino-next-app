@@ -1,12 +1,7 @@
-import movieService from "@/shared/api/movie.service";
+import { getSeriesById } from "@/shared/api/series.service";
 import { Hero } from "@/widgets/hero";
 import { MovieDtoV13 } from "@openmoviedb/kinopoiskdev_client";
 import { Metadata, NextPage } from "next";
-
-export const getMovies = async () => {
-  const { data } = await movieService.getById(79848);
-  return data;
-};
 
 export const metadata: Metadata = {
   description: "Смотреть онлайн сериалы Disney",
@@ -14,7 +9,7 @@ export const metadata: Metadata = {
 };
 
 export const Page: NextPage = async () => {
-  const movie: MovieDtoV13 | null = await getMovies();
+  const movie: MovieDtoV13 | null = await getSeriesById(79848);
   return <Hero movie={movie} />;
 };
 

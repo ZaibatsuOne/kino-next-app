@@ -1,11 +1,7 @@
 import { HomePage } from "@/pages/main-page";
-import movieService from "@/shared/api/movie.service";
+import { getMovieById } from "@/shared/api";
 
-export const getFilm = async () => {
-  const { data } = await movieService.getById(111543);
-  return data;
-};
 export default async function Home() {
-  const movie = await getFilm();
+  const movie = await getMovieById(111543);
   return <HomePage movie={movie} />;
 }

@@ -1,11 +1,6 @@
-import { kp } from "@/shared/api/baseApi";
+import { getMovieById } from "@/shared/api";
 import { Hero } from "@/widgets/hero";
 import { NextPage } from "next";
-
-export const getMovieById = async (id: number) => {
-  const { data } = await kp.movie.getById(id);
-  return data;
-};
 
 interface Props {
   params: { id: number };

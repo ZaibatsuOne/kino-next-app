@@ -1,13 +1,8 @@
 import { RussianSerials } from "@/pages/series-page/ui/russian-serials";
-import { queryRusSerials } from "@/shared/api";
-import { kp } from "@/shared/api/baseApi";
+import { getRussianSeries } from "@/shared/api";
 
-export const getMovies = async () => {
-  const { data } = await kp.movie.getByFilters(queryRusSerials);
-  return data;
-};
 const Rus = async () => {
-  const movies = await getMovies();
+  const movies = await getRussianSeries();
   return <RussianSerials movies={movies} />;
 };
 

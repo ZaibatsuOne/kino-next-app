@@ -20,7 +20,7 @@ export const checkMovie = (firstVideoUrl: string, movie: MovieDtoV13) => {
             fill
             objectFit="cover"
             priority
-            quality={100}
+            quality={60}
             src={movie?.backdrop?.url}
           />
         ) : (
