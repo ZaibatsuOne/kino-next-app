@@ -11,16 +11,15 @@ import {
   Separator,
 } from "@/shared/ui";
 import { MovieDtoV13 } from "@openmoviedb/kinopoiskdev_client";
-import { Info } from "lucide-react";
+import { Info, Popcorn, Tv } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
 import { FC } from "react";
 
 interface Props {
   movie: MovieDtoV13;
 }
 export const InformationFilmButton: FC<Props> = ({ movie }) => {
-  const { backdrop } = movie;
+  const { backdrop, isSeries } = movie;
 
   return (
     <Dialog>
@@ -29,32 +28,31 @@ export const InformationFilmButton: FC<Props> = ({ movie }) => {
         <span>Информация о фильме</span>
       </DialogTrigger>
       <DialogContent>
-        <DialogHeader className="flex flex-col gap-6">
-          {backdrop?.url ? (
-            <Image
-              alt="movie poster"
-              className="absolute inset-0 w-full h-full object-cover opacity-10 rounded-2xl -z-10"
-              height={400}
-              src={backdrop.url}
-              unselectable="on"
-              width={400}
-            />
-          ) : null}
-          <DialogTitle>{movie?.name}</DialogTitle>
-          <DialogDescription>{movie?.description}</DialogDescription>
-          <Separator />
-          <DialogFooter className="flex items-center justify-between">
-            <Link href={`/movie/${movie.id}`}>
-              <Button size="sm" variant="ghost">
-                Перейти к просмотру
-              </Button>
-            </Link>
+        <DialogHeader className="flex flex-col">
+          <DialogTitle className="relative">
+            <div className="absolute w-full h-80 bottom-0 bg-gradient-to-t from-[#1A1D29] to-transparent" />
+            {backdrop?.url ? (
+              <Image
+                alt="Movie poster"
+                className="w-full h-96 object-cover rounded-t-xl "
+                height={600}
+                src={backdrop?.url}
+                width={400}
+              />
+            ) : null}
+            <h3 className="absolute p-4 bottom-0 text-3xl font-bold">
+              {movie?.name}
+            </h3>
+          </DialogTitle>
+          <DialogDescription className="flex flex-col gap-3 p-4">
             <div className="flex items-center gap-2">
+              <div>{isSeries ? <Popcorn /> : <Tv />}</div>
               {MovieAgeRating(movie)}
               {MovieYear(movie)}
               {MovieCountry(movie)}
             </div>
-          </DialogFooter>
+            <div className="text-sm">{movie?.description}</div>
+          </DialogDescription>
         </DialogHeader>
       </DialogContent>
     </Dialog>

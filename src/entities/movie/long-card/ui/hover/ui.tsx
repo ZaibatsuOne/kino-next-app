@@ -14,7 +14,7 @@ export const Hover: FC<Props> = (props) => {
 
   return (
     <motion.div
-      className="absolute w-full h-full bg-black/80 p-3 rounded-lg"
+      className="absolute w-full h-full bg-black/80 p-3 py-5 rounded-lg"
       initial={{ opacity: 0 }}
       whileHover={{ opacity: 1 }}
     >

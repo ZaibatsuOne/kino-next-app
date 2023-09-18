@@ -19,7 +19,7 @@ export const MovieLongCard: FC<Props> = (props) => {
       <motion.div className="relative group" whileHover={{ scale: 1.07 }}>
         <Hover movie={movie} />
         <article
-          className="w-full border border-[#353843] object-cover 
+          className="w-full object-cover 
           rounded-lg h-[351px] bg-[#40464E] overflow-hidden"
         >
           {movie?.poster?.url ? (
