@@ -1,6 +1,8 @@
 import { getMovieById } from "@/shared/api";
+import { Separator } from "@/shared/ui";
 import { ActorsList } from "@/widgets/actors";
 import { Hero } from "@/widgets/hero";
+import { Similliar } from "@/widgets/similliar";
 import { NextPage } from "next";
 
 interface Props {
@@ -9,9 +11,11 @@ interface Props {
 const MovieByIdPage: NextPage<Props> = async ({ params }) => {
   const movie = await getMovieById(params.id);
   return (
-    <section>
+    <section className="flex flex-col gap-10">
       <Hero movie={movie} />
+
       <ActorsList movie={movie} />
+      <Similliar movie={movie} />
     </section>
   );
 };
