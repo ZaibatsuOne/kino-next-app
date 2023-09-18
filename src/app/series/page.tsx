@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 };
 
 export const Page: NextPage = async () => {
-  const movie: MovieDtoV13 | null = await getSeriesById(79848);
+  const movie: MovieDtoV13 | null = await getSeriesById(571335);
   return <Hero movie={movie} />;
 };
 
