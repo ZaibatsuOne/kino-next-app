@@ -12,7 +12,6 @@ const MovieByIdPage: NextPage<Props> = async ({ params }) => {
   return (
     <section className="flex flex-col gap-10">
       <Hero movie={movie} />
-
       <ActorsList movie={movie} />
       <Similliar movie={movie} />
     </section>

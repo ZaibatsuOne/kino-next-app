@@ -8,17 +8,22 @@ interface Props {
   movie: MovieDtoV13 | null;
 }
 export const Similliar: FC<Props> = ({ movie }) => {
-  const { similarMovies } = movie;
+  const similiar: LinkedMovie[] | null = movie?.similarMovies ?? null;
+
   return (
-    <section className="container">
-      <Category>
-        <CategoryTitle>Похожее</CategoryTitle>
-        <div className="grid grid-cols-4 grid-rows-2 gap-5">
-          {similarMovies?.slice(0, 8).map((movie: MovieDtoV13) => (
-            <MovieShortCard key={movie.id} movie={movie} />
-          ))}
-        </div>
-      </Category>
-    </section>
+    <>
+      {similiar !== null && similiar.length > 0 ? (
+        <section className="container">
+          <Category>
+            <CategoryTitle>Похожее</CategoryTitle>
+            <div className="grid grid-cols-4 gap-5">
+              {similiar?.slice(0, 8).map((movie) => (
+                <MovieShortCard key={movie.id} movie={movie} />
+              ))}
+            </div>
+          </Category>
+        </section>
+      ) : null}
+    </>
   );
 };

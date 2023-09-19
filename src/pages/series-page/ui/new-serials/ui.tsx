@@ -1,7 +1,6 @@
 "use client";
 
 import { MovieShortCard } from "@/entities/movie";
-import { Carousel } from "@/shared/ui/carousel/ui";
 import { Category, CategoryCarousel, CategoryTitle } from "@/widgets/category";
 import {
   MovieDocsResponseDtoV13,
