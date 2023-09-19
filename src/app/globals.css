@@ -91,3 +91,8 @@
 .slider-controler .slider-arrow::after {
   content: "";
 }
+.carousel-container {
+  width: 100%; /* Установите контейнеру 100% ширины экрана */
+  overflow-x: scroll; /* Разрешить горизонтальную прокрутку */
+  white-space: nowrap; /* Запрет переноса содержимого на следующую строку */
+}

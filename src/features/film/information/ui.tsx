@@ -45,9 +45,9 @@ export const InformationFilmButton: FC<Props> = ({ movie }) => {
                 width={400}
               />
             ) : null}
-            <h3 className="absolute p-4 -bottom-6 text-3xl font-bold">
+            <h2 className="absolute p-4 -bottom-6 text-3xl font-bold">
               {movie?.name ? movie.name : null}
-            </h3>
+            </h2>
           </DialogTitle>
           <DialogDescription className="flex flex-col gap-3 p-4">
             <div className="flex items-center gap-2 text-sm">

@@ -18,11 +18,11 @@ export const CategoryCarousel: FC<ICategoryCarousel> = ({
   className,
   item,
 }) => {
-  return <Carousel className={className}>{children}</Carousel>;
+  return <Carousel shadow={true}>{children}</Carousel>;
 };
 
 export const CategoryTitle: FC<TitleProps> = ({ children, className }) => {
-  return <Title className={cn("mb-6", className)}>{children}</Title>;
+  return <Title className={cn("mb-6 container", className)}>{children}</Title>;
 };
 
 // export const CategoryItem: FC = () => {};

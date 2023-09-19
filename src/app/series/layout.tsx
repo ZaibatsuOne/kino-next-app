@@ -12,8 +12,8 @@ export default async function Layout(props: Props) {
   return (
     <>
       {children}
-      <section className="container flex flex-col gap-14">
-        {popular}
+      <section className=" flex flex-col gap-14">
+        <div className="container">{popular}</div>
         {novie}
         {rus}
       </section>

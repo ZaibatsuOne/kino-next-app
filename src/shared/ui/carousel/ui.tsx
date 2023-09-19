@@ -1,56 +1,67 @@
 "use client";
-
 import { cn } from "@/shared/lib/utils";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { FC, PropsWithChildren } from "react";
 import "swiper/css";
+import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-import { Navigation, Pagination } from "swiper/modules";
+import { Mousewheel, Navigation, Pagination, Scrollbar } from "swiper/modules";
 import { Swiper } from "swiper/react";
 
 interface Props extends PropsWithChildren {
-  className?: string;
   count?: number;
+  shadow?: boolean;
   slidesButtons?: boolean;
 }
 export const Carousel: FC<Props> = ({
   children,
-  className,
   count = 5,
-  slidesButtons = true,
+  shadow = false,
+  slidesButtons = false,
 }) => {
   return (
-    <Swiper
-      className={className}
-      initialSlide={0.5}
-      modules={[Pagination, Navigation]}
-      navigation={{
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      }}
-      slidesPerView={count}
-      spaceBetween={8}
-    >
-      {children}
-      {slidesButtons ? (
-        <div className="slider-controler flex items-center">
-          {[...Array(2)].map((_, index) => {
-            return (
-              <div
-                className={cn(
-                  `backdrop-blur-xl rounded-2xl slider-arrow text-2xl`,
-                  index === 0 ? "swiper-button-prev" : "swiper-button-next"
-                )}
-                key={index}
-              >
-                {index === 0 ? <ChevronLeft /> : <ChevronRight />}
-              </div>
-            );
-          })}
-        </div>
+    <div className="relative w-full overflow-hidden">
+      {shadow ? (
+        <>
+          <div className="absolute z-10 w-1/4 h-full bg-gradient-to-r from-[#1A1D29] to-transparent " />
+          <div className="absolute z-10 w-1/4 h-full bg-gradient-to-l from-[#1A1D29] to-transparent right-0 " />
+        </>
       ) : null}
-    </Swiper>
+      <Swiper
+        className="relative container px-40"
+        initialSlide={0.5}
+        loop={true}
+        modules={[Pagination, Navigation, Scrollbar, Mousewheel]}
+        mousewheel={true}
+        navigation={{
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        }}
+        slidesPerView={count}
+        spaceBetween={20}
+        style={{ overflowX: "visible", paddingLeft: 20 }}
+      >
+        <>{children}</>
+        {slidesButtons ? (
+          <div className="slider-controler flex items-center">
+            {[...Array(2)].map((_, index) => {
+              return (
+                <div
+                  className={cn(
+                    `backdrop-blur-xl rounded-2xl slider-arrow text-2xl`,
+                    index === 0 ? "swiper-button-prev" : "swiper-button-next"
+                  )}
+                  key={index}
+                >
+                  {index === 0 ? <ChevronLeft /> : <ChevronRight />}
+                </div>
+              );
+            })}
+          </div>
+        ) : null}
+      </Swiper>
+    </div>
   );
 };
