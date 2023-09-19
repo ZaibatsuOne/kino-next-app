@@ -25,7 +25,7 @@ export const Hero: FC<Props> = ({ movie }) => {
       </div>
       <Background movie={movie} />
       <div className="container">
-        <div className=" absolute flex flex-col gap-10 z-10 bottom-[20%] w-1/2">
+        <div className=" absolute flex flex-col gap-10 z-10 bottom-[20%] w-[70%]">
           <div className="flex flex-col gap-4">
             {movieLogo ? (
               <Image
