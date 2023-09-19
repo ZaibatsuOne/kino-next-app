@@ -30,8 +30,6 @@ export const Carousel: FC<Props> = ({
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
       }}
-      onSwiper={(swiper) => console.log(swiper)}
-      scrollbar={{ draggable: true }}
       slidesPerView={count}
       spaceBetween={8}
     >
