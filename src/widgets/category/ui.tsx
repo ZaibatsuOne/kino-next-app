@@ -22,7 +22,7 @@ export const CategoryCarousel: FC<ICategoryCarousel> = ({
 };
 
 export const CategoryTitle: FC<TitleProps> = ({ children, className }) => {
-  return <Title className={cn("mb-6 container", className)}>{children}</Title>;
+  return <Title className={cn("container", className)}>{children}</Title>;
 };
 
 // export const CategoryItem: FC = () => {};

@@ -22,7 +22,7 @@ export const Carousel: FC<Props> = ({
   slidesButtons = false,
 }) => {
   return (
-    <div className="relative w-full overflow-hidden">
+    <div className="relative w-full h-full overflow-y-visible overflow-hidden">
       {shadow ? (
         <>
           <div className="absolute z-10 w-1/4 h-full bg-gradient-to-r from-[#1A1D29] to-transparent " />
@@ -30,7 +30,7 @@ export const Carousel: FC<Props> = ({
         </>
       ) : null}
       <Swiper
-        className="relative container px-40"
+        className="relative container"
         initialSlide={0.5}
         loop={true}
         modules={[Pagination, Navigation, Scrollbar, Mousewheel]}
@@ -41,9 +41,14 @@ export const Carousel: FC<Props> = ({
         }}
         slidesPerView={count}
         spaceBetween={20}
-        style={{ overflowX: "visible", paddingLeft: 20 }}
+        style={{
+          overflowX: "visible",
+          paddingTop: 20,
+          paddingBottom: 20,
+          paddingLeft: 20,
+        }}
       >
-        <>{children}</>
+        {children}
         {slidesButtons ? (
           <div className="slider-controler flex items-center">
             {[...Array(2)].map((_, index) => {

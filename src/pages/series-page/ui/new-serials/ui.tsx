@@ -1,6 +1,7 @@
 "use client";
 
 import { MovieShortCard } from "@/entities/movie";
+import { Carousel } from "@/shared/ui/carousel/ui";
 import { Category, CategoryCarousel, CategoryTitle } from "@/widgets/category";
 import {
   MovieDocsResponseDtoV13,
@@ -17,7 +18,7 @@ export const NewSerials: FC<Props> = (props) => {
   return (
     <Category>
       <CategoryTitle>Новые сериалы</CategoryTitle>
-      <CategoryCarousel>
+      <CategoryCarousel className="overflow-visible">
         {movies?.docs?.map((movie: MovieDtoV13) => (
           <SwiperSlide key={movie.id}>
             <MovieShortCard movie={movie} />
