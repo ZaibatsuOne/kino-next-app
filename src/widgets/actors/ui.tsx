@@ -5,7 +5,7 @@ import { MovieDtoV13 } from "@openmoviedb/kinopoiskdev_client";
 import { FC } from "react";
 import { SwiperSlide } from "swiper/react";
 
-import { CategoryTitle } from "../category";
+import { Category, CategoryTitle } from "../category";
 
 interface Props {
   movie: MovieDtoV13 | null;
@@ -16,7 +16,7 @@ export const ActorsList: FC<Props> = ({ movie }) => {
   return (
     <>
       {actors && actors?.length > 0 ? (
-        <section className="container ">
+        <Category className="container">
           <CategoryTitle>Актерский состав</CategoryTitle>
           <Carousel count={8} slidesButtons={false}>
             {actors?.map((person) => (
@@ -25,7 +25,7 @@ export const ActorsList: FC<Props> = ({ movie }) => {
               </SwiperSlide>
             ))}
           </Carousel>
-        </section>
+        </Category>
       ) : null}
     </>
   );
