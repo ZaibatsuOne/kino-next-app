@@ -48,9 +48,9 @@ export const queryNewSerials: Filter<MovieFields> = {
   "poster.url": "!null",
   "rating.kp": "7-10",
   selectFields: ["id", "name", "poster.url", "rating.kp", "ageRating"],
-  sortField: "premiere.world",
-  sortType: "-1",
-  year: "2023-2023",
+  sortField: ["premiere.world", "votes.kp"],
+  sortType: ["-1", "-1"],
+  year: "2022-2023",
 };
 
 export const queryAnimationSerials: Filter<MovieFields> = {

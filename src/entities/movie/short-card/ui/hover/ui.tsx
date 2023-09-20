@@ -1,5 +1,6 @@
 "use client";
 
+import { MovieAgeRating } from "@/shared/lib";
 import { MovieDtoV13 } from "@openmoviedb/kinopoiskdev_client";
 import { motion } from "framer-motion";
 import { Star } from "lucide-react";
@@ -18,6 +19,7 @@ export const Hover: FC<Props> = (props) => {
     <motion.div
       className="absolute w-full h-full bg-black/80 p-3 py-5 rounded-2xl"
       initial={{ opacity: 0 }}
+      transition={{ duration: 0.3 }}
       whileHover={{ opacity: 1 }}
     >
       <div className="flex flex-col h-full">
@@ -33,7 +35,7 @@ export const Hover: FC<Props> = (props) => {
               </>
             )}
           </div>
-          {movie.ageRating ? <span>{movie.ageRating}+</span> : null}
+          {MovieAgeRating(movie)}
         </div>
       </div>
     </motion.div>

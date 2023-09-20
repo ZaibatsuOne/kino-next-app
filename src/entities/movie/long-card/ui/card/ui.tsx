@@ -16,7 +16,11 @@ export const MovieLongCard: FC<Props> = (props) => {
 
   return (
     <Link href={`/movie/${movie.id}`}>
-      <motion.div className="relative group" whileHover={{ scale: 1.07 }}>
+      <motion.div
+        className="relative group"
+        transition={{ duration: 0.3 }}
+        whileHover={{ scale: 1.07 }}
+      >
         <Hover movie={movie} />
         <article
           className="w-full object-cover 

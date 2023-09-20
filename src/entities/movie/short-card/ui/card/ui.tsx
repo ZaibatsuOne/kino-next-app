@@ -15,7 +15,11 @@ export const MovieShortCard: FC<Props> = (props) => {
 
   return (
     <Link href={`/movie/${movie.id}`}>
-      <motion.div className="relative h-40 group " whileHover={{ scale: 1.07 }}>
+      <motion.div
+        className="relative h-40 group"
+        transition={{ duration: 0.3 }}
+        whileHover={{ scale: 1.07 }}
+      >
         <Hover movie={movie} />
         {movie?.poster?.url ? (
           <Image

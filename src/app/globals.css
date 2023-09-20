@@ -71,7 +71,7 @@
     @apply border-border;
   }
   body {
-    @apply bg-[#1A1D29] text-white;
+    @apply flex flex-col bg-[#1A1D29] text-white;
   }
 }
 
@@ -80,7 +80,10 @@
     @apply max-w-7xl;
   }
   .buttonNextSwiper {
-    @apply bg-black w-10 h-10 flex;
+    @apply bg-black w-10 h-10;
+  }
+  .footer {
+    @apply bg-[#090B13] pb-[26px] pt-[50px] mt-16;
   }
 }
 

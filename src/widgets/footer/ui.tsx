@@ -6,7 +6,7 @@ import { footerList } from "./config";
 
 export const Footer: FC = () => {
   return (
-    <footer className="bg-[#090B13] pb-[26px] pt-[50px] mt-16">
+    <footer className="footer">
       <div className="flex flex-col gap-10 items-center text-xs">
         <div className="container flex flex-col gap-9 items-center text-center">
           <Logo />
