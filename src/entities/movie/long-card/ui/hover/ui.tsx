@@ -21,7 +21,7 @@ export const Hover: FC<Props> = (props) => {
       <div className="flex flex-col h-full">
         <div className="flex flex-col gap-2 flex-grow">
           <h4 className="text-2xl font-bold leading-6">{movie.name}</h4>
-          <p className="line-clamp-4 text-xs">{movie.description}</p>
+          <p className="line-clamp-4 text-xs">{movie.shortDescription}</p>
         </div>
 
         <div className="flex justify-between items-center flex-grow-0">

@@ -10,7 +10,7 @@ export const Popular: FC<ICategoryWidget> = (props) => {
   const { movies, type } = props;
   return (
     <Category>
-      <CategoryTitle>Популярные {type}</CategoryTitle>
+      <CategoryTitle className="container">Популярные {type}</CategoryTitle>
       <CategoryCarousel>
         {movies?.docs.map((movie) => (
           <SwiperSlide key={movie.id}>

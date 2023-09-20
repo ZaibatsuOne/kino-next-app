@@ -11,7 +11,7 @@ export const DocumentarySection: FC<ICategoryWidget> = (props) => {
   const { movies, type } = props;
   return (
     <Category>
-      <CategoryTitle>Документальные {type}</CategoryTitle>
+      <CategoryTitle className="container">Документальные {type}</CategoryTitle>
       <CategoryCarousel>
         {movies?.docs.map((movie) => (
           <SwiperSlide key={movie.id}>
