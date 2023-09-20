@@ -14,15 +14,19 @@ export const ActorsList: FC<Props> = ({ movie }) => {
   const persons = movie?.persons;
   const actors = persons?.filter((person) => person.profession === "актеры");
   return (
-    <section className="container ">
-      <CategoryTitle>Актерский состав</CategoryTitle>
-      <Carousel count={8} slidesButtons={false}>
-        {actors?.map((person) => (
-          <SwiperSlide key={person.name}>
-            <Actor person={person} />
-          </SwiperSlide>
-        ))}
-      </Carousel>
-    </section>
+    <>
+      {actors && actors?.length > 0 ? (
+        <section className="container ">
+          <CategoryTitle>Актерский состав</CategoryTitle>
+          <Carousel count={8} slidesButtons={false}>
+            {actors?.map((person) => (
+              <SwiperSlide key={person.name}>
+                <Actor person={person} />
+              </SwiperSlide>
+            ))}
+          </Carousel>
+        </section>
+      ) : null}
+    </>
   );
 };
