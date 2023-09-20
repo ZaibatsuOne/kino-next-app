@@ -14,7 +14,6 @@ export const queryPopularSerials = queryBuilder
   .filterExact("name", SPECIAL_VALUE.NOT_NULL)
   .filterExact("poster.url", SPECIAL_VALUE.NOT_NULL)
   .filterExact("isSeries", true)
-  // .sort("audience.count")
   .paginate(1, 10)
   .build();
 
@@ -59,4 +58,19 @@ export const queryAnimationSerials: Filter<MovieFields> = {
   sortField: "votes.kp",
   sortType: "-1",
   year: "2018-2023",
+};
+
+export const queryDocumentarySerials: Filter<MovieFields> = {
+  ageRating: "14-80",
+  "genres.name": "документальный",
+  isSeries: true,
+  limit: 15,
+  name: "!null",
+  page: 1,
+  "poster.url": "!null",
+  "rating.kp": "6-10",
+  selectFields: ["id", "name", "poster.url", "rating.kp", "ageRating"],
+  sortField: "votes.kp",
+  sortType: "-1",
+  year: "2016-2023",
 };

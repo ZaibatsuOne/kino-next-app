@@ -3,13 +3,14 @@ import { ReactNode } from "react";
 interface Props {
   animation: ReactNode;
   children: ReactNode;
+  documentary: ReactNode;
   novie: ReactNode;
   popular: ReactNode;
   rus: ReactNode;
 }
 
 export default async function Layout(props: Props) {
-  const { animation, children, novie, popular, rus } = props;
+  const { animation, children, documentary, novie, popular, rus } = props;
   return (
     <>
       {children}
@@ -18,6 +19,7 @@ export default async function Layout(props: Props) {
         {rus}
         {novie}
         {animation}
+        {documentary}
       </section>
     </>
   );

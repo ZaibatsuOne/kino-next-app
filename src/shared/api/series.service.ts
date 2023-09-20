@@ -2,6 +2,7 @@ import { kp } from "@/shared/api/baseApi";
 
 import {
   queryAnimationSerials,
+  queryDocumentarySerials,
   queryNewSerials,
   queryPopularSerials,
   queryRusSerials,
@@ -46,6 +47,15 @@ export const getRussianSeries = async () => {
 //Мультфтльмы - анимационные сериалы
 export const getAnimationSerials = async () => {
   const { data, error } = await kp.movie.getByFilters(queryAnimationSerials);
+  if (error) {
+    throw new Error("Не удалось получить сериалы");
+  }
+  return data;
+};
+
+//Документальные сериалы
+export const getDocumentarySerials = async () => {
+  const { data, error } = await kp.movie.getByFilters(queryDocumentarySerials);
   if (error) {
     throw new Error("Не удалось получить сериалы");
   }
