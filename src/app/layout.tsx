@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 import { cn } from "@/shared/lib/utils";
+import { Footer } from "@/widgets/footer";
 import { Header } from "@/widgets/header";
 import { Work_Sans } from "next/font/google";
 
@@ -23,6 +24,7 @@ export default function RootLayout({
       <body className={cn("", font.className)}>
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
