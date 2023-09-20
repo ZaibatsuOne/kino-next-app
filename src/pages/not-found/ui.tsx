@@ -10,7 +10,7 @@ import { useRouter } from "next/navigation";
 export const NotFound: NextPage = () => {
   const router = useRouter();
   return (
-    <section className="flex justify-center transform translate-y-1/3">
+    <section className="flex justify-center my-32">
       <div className="w-[65%] flex gap-20">
         <Image
           alt="Капитан Джек Воробей"
