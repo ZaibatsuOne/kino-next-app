@@ -1,17 +1,21 @@
-import { Card } from "@/shared/ui";
-import { LinkedMovie, MovieDtoV13 } from "@openmoviedb/kinopoiskdev_client";
+"use client";
+import { MovieDtoV13 } from "@openmoviedb/kinopoiskdev_client";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { FC } from "react";
 
+import { Hover } from "../hover";
+
 interface Props {
-  movie: LinkedMovie | MovieDtoV13;
+  movie: MovieDtoV13;
 }
 export const MovieShortCard: FC<Props> = (props) => {
   const { movie } = props;
   return (
     <Link href={`/movie/${movie.id}`}>
-      <Card className="w-full h-40  border-[#353843] bg-black rounded-2xl">
+      <motion.div className="relative h-40 group " whileHover={{ scale: 1.07 }}>
+        <Hover movie={movie} />
         {movie?.poster?.url ? (
           <Image
             alt=""
@@ -24,7 +28,7 @@ export const MovieShortCard: FC<Props> = (props) => {
         ) : (
           <span>Forbidden</span>
         )}
-      </Card>
+      </motion.div>
     </Link>
   );
 };

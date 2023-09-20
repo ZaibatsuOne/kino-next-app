@@ -10,7 +10,11 @@ interface Props extends PropsWithChildren {
 }
 
 export const Category: FC<Props> = ({ children, className }) => {
-  return <section className={cn("", className)}>{children}</section>;
+  return (
+    <section className={cn("flex flex-col gap-2", className)}>
+      {children}
+    </section>
+  );
 };
 
 export const CategoryCarousel: FC<ICategoryCarousel> = ({
@@ -22,7 +26,7 @@ export const CategoryCarousel: FC<ICategoryCarousel> = ({
 };
 
 export const CategoryTitle: FC<TitleProps> = ({ children, className }) => {
-  return <Title className={cn("container", className)}>{children}</Title>;
+  return <Title className={cn("container pb-4", className)}>{children}</Title>;
 };
 
 // export const CategoryItem: FC = () => {};

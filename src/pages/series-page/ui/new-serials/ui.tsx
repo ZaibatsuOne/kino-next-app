@@ -18,7 +18,7 @@ export const NewSerials: FC<Props> = (props) => {
   return (
     <Category>
       <CategoryTitle>Новые сериалы</CategoryTitle>
-      <CategoryCarousel className="overflow-visible">
+      <CategoryCarousel>
         {movies?.docs?.map((movie: MovieDtoV13) => (
           <SwiperSlide key={movie.id}>
             <MovieShortCard movie={movie} />

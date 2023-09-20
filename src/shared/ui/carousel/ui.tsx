@@ -25,8 +25,8 @@ export const Carousel: FC<Props> = ({
     <div className="relative w-full h-full overflow-y-visible overflow-hidden">
       {shadow ? (
         <>
-          <div className="absolute z-10 w-1/4 h-full bg-gradient-to-r from-[#1A1D29] to-transparent " />
-          <div className="absolute z-10 w-1/4 h-full bg-gradient-to-l from-[#1A1D29] to-transparent right-0 " />
+          <div className="absolute z-10 w-[10%] h-full bg-gradient-to-r from-[#1A1D29] to-transparent " />
+          <div className="absolute z-10 w-[10%] h-full bg-gradient-to-l from-[#1A1D29] to-transparent right-0 " />
         </>
       ) : null}
       <Swiper
@@ -43,9 +43,9 @@ export const Carousel: FC<Props> = ({
         spaceBetween={20}
         style={{
           overflowX: "visible",
-          paddingTop: 20,
           paddingBottom: 20,
           paddingLeft: 20,
+          paddingTop: 20,
         }}
       >
         {children}
