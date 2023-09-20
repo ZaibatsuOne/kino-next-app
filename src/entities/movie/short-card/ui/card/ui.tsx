@@ -1,5 +1,5 @@
 "use client";
-import { MovieDtoV13 } from "@openmoviedb/kinopoiskdev_client";
+import { LinkedMovie, MovieDtoV13 } from "@openmoviedb/kinopoiskdev_client";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
@@ -12,6 +12,7 @@ interface Props {
 }
 export const MovieShortCard: FC<Props> = (props) => {
   const { movie } = props;
+
   return (
     <Link href={`/movie/${movie.id}`}>
       <motion.div className="relative h-40 group " whileHover={{ scale: 1.07 }}>
