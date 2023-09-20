@@ -14,18 +14,12 @@ export const queryPopularSerials = queryBuilder
   .filterExact("name", SPECIAL_VALUE.NOT_NULL)
   .filterExact("poster.url", SPECIAL_VALUE.NOT_NULL)
   .filterExact("isSeries", true)
+  // .sort("audience.count")
   .paginate(1, 10)
   .build();
 
-// export const queryRussianSerials = queryBuilder
-//   .select(["name", "poster.url"])
-//   .filterRange("year", [2019, 2023])
-//   .sort("premiere.russia", "-1")
-//   .filterRange("votes.russianFilmCritics", [7, 10])
-//   .build();
-
 export const queryRusSerials: Filter<MovieFields> = {
-  ageRating: "18-80",
+  ageRating: "16-80",
   "countries.name": "Россия",
   limit: 10,
   name: "!null",
@@ -50,4 +44,19 @@ export const queryNewSerials: Filter<MovieFields> = {
   sortField: "premiere.world",
   sortType: "-1",
   year: "2023-2023",
+};
+
+export const queryAnimationSerials: Filter<MovieFields> = {
+  ageRating: "14-80",
+  "genres.name": "мультфильм",
+  isSeries: true,
+  limit: 15,
+  name: "!null",
+  page: 1,
+  "poster.url": "!null",
+  "rating.kp": "6-10",
+  selectFields: ["id", "name", "poster.url", "rating.kp", "ageRating"],
+  sortField: "votes.kp",
+  sortType: "-1",
+  year: "2018-2023",
 };
