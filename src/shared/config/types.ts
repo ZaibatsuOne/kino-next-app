@@ -1,3 +1,5 @@
+import { MovieDocsResponseDtoV13 } from "@openmoviedb/kinopoiskdev_client";
+
 export interface IMoviePoster {
   url: string;
 }
@@ -16,4 +18,9 @@ export interface IMoviePreview {
   page: number;
   pages: number;
   total: number;
+}
+
+export interface ICategoryWidget {
+  movies: MovieDocsResponseDtoV13 | null;
+  type: "сериалы" | "фильмы";
 }

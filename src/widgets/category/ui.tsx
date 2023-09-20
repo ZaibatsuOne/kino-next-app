@@ -1,9 +1,13 @@
+"use client";
+import { MovieLongCard } from "@/entities/movie";
+import { MovieShortCard } from "@/entities/movie";
 import { cn } from "@/shared/lib/utils";
 import { Title, type TitleProps } from "@/shared/ui";
 import { Carousel } from "@/shared/ui/carousel/ui";
 import { FC, PropsWithChildren } from "react";
+import { SwiperSlide } from "swiper/react";
 
-import { ICategoryCarousel } from "./config";
+import { ICategoryCarousel, ICategoryList } from "./config";
 
 interface Props extends PropsWithChildren {
   className?: string;
@@ -26,7 +30,29 @@ export const CategoryCarousel: FC<ICategoryCarousel> = ({
 };
 
 export const CategoryTitle: FC<TitleProps> = ({ children, className }) => {
-  return <Title className={cn("container pb-4", className)}>{children}</Title>;
+  return <Title className={cn("container", className)}>{children}</Title>;
 };
 
-// export const CategoryItem: FC = () => {};
+// export const CategoryList: FC<ICategoryList> = ({ movies, type }) => {
+//   if (type === "long-card") {
+//     return (
+//       <div>
+//         {movies.docs.map((movie) => (
+//           <SwiperSlide key={movie.id}>
+//             <MovieLongCard movie={movie} />
+//           </SwiperSlide>
+//         ))}
+//       </div>
+//     );
+//   } else {
+//     return (
+//       <>
+//         {movies.docs.map((movie) => (
+//           <SwiperSlide key={movie.id}>
+//             <MovieShortCard movie={movie} />
+//           </SwiperSlide>
+//         ))}
+//       </>
+//     );
+//   }
+// };

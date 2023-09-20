@@ -1,9 +1,9 @@
-import { RussianSerials } from "@/pages/series-page/ui/russian-serials";
 import { getRussianSeries } from "@/shared/api";
+import { Russian as RussianSection } from "@/widgets/russian";
 
 const Rus = async () => {
   const movies = await getRussianSeries();
-  return <RussianSerials movies={movies} />;
+  return <RussianSection movies={movies} type="сериалы" />;
 };
 
 export default Rus;
