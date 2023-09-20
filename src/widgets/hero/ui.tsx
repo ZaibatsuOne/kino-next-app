@@ -18,7 +18,6 @@ export const Hero: FC<Props> = ({ movie }) => {
       <div className="absolute z-10 -top-28 h-[700px] inset-0">
         <div className="absolute w-full h-28 bg-gradient-to-b from-[#1A1D29] to-transparent" />
         <div className="absolute w-full h-28 bg-gradient-to-b from-[#1A1D29] to-transparent" />
-
         <div className="absolute w-full h-[650px] bg-gradient-to-tr bottom-0 from-[#1A1D29] via-transparent to-transparent " />
         <div className="absolute w-full h-[600px] bg-gradient-to-t bottom-0 from-[#1A1D29] to-transparent" />
         <div className="absolute w-full h-[600px] bg-gradient-to-t bottom-0 from-[#1A1D29] to-transparent" />

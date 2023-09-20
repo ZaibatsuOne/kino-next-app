@@ -13,16 +13,14 @@ export const Similliar: FC<Props> = ({ movie }) => {
   return (
     <>
       {similiar !== null && similiar.length > 0 ? (
-        <section className="container">
-          <Category>
-            <CategoryTitle className="pb-5">Похожее</CategoryTitle>
-            <div className="grid grid-cols-4 gap-5">
-              {similiar?.slice(0, 8).map((movie) => (
-                <MovieShortCard key={movie.id} movie={movie as MovieDtoV13} />
-              ))}
-            </div>
-          </Category>
-        </section>
+        <Category className="container">
+          <CategoryTitle className="pb-5">Похожее</CategoryTitle>
+          <div className="grid grid-cols-4 gap-5">
+            {similiar?.slice(0, 8).map((movie) => (
+              <MovieShortCard key={movie.id} movie={movie as MovieDtoV13} />
+            ))}
+          </div>
+        </Category>
       ) : null}
     </>
   );

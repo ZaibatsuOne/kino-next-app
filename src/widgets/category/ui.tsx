@@ -29,8 +29,16 @@ export const CategoryCarousel: FC<ICategoryCarousel> = ({
   return <Carousel shadow={true}>{children}</Carousel>;
 };
 
-export const CategoryTitle: FC<TitleProps> = ({ children, className }) => {
-  return <Title className={cn("container", className)}>{children}</Title>;
+export const CategoryTitle: FC<TitleProps> = ({
+  children,
+  className,
+  ...props
+}) => {
+  return (
+    <Title {...props} className={cn("", className)}>
+      {children}
+    </Title>
+  );
 };
 
 // export const CategoryList: FC<ICategoryList> = ({ movies, type }) => {
