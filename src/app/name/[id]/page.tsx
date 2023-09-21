@@ -1,13 +1,8 @@
-import { kp } from "@/shared/api/baseApi";
+import { getActor } from "@/shared/api";
 import { AboutPerson } from "@/widgets/about-person";
 import { Filmography } from "@/widgets/filmography";
 import { NextPage } from "next";
 import Image from "next/image";
-
-export const getActor = async (id: number) => {
-  const { data } = await kp.person.getById(id);
-  return data;
-};
 
 interface Props {
   params: { id: number };

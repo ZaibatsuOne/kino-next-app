@@ -1,4 +1,3 @@
-export * from "./series.service";
-export * from "./movie.service";
+export * from "./lib";
 export { queryPopularSerials } from "./querySetting";
 export { queryRusSerials } from "./querySetting";

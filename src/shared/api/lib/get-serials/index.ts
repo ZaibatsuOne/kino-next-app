@@ -6,7 +6,7 @@ import {
   queryNewSerials,
   queryPopularSerials,
   queryRusSerials,
-} from "./querySetting";
+} from "../../querySetting";
 
 //Получить сериал по ID
 export const getSeriesById = async (id: number) => {

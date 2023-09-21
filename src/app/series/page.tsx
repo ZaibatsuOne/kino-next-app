@@ -1,4 +1,4 @@
-import { getSeriesById } from "@/shared/api/series.service";
+import { getSeriesById } from "@/shared/api";
 import { Hero } from "@/widgets/hero";
 import { MovieDtoV13 } from "@openmoviedb/kinopoiskdev_client";
 import { Metadata, NextPage } from "next";

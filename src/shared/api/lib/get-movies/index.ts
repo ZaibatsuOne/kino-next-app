@@ -1,4 +1,4 @@
-import { kp } from "./baseApi";
+import { kp } from "../../baseApi";
 
 //Получение фильма по ID
 export const getMovieById = async (id: number) => {
