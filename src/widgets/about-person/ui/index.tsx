@@ -2,7 +2,7 @@ import { Title } from "@/shared/ui";
 import { Person } from "@openmoviedb/kinopoiskdev_client";
 import { FC } from "react";
 
-import { getBirthday, getBirthplace, getProfession } from "../lib";
+import { getBirthday, getBirthplace, getGrowth, getProfession } from "../lib";
 
 interface Props {
   actor: null | Person;
@@ -15,7 +15,7 @@ export const AboutPerson: FC<Props> = ({ actor }) => {
       title: "Профессия:",
     },
     {
-      param: actor?.growth + " см",
+      param: getGrowth(actor?.growth),
       title: "Рост:",
     },
     {
