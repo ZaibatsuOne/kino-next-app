@@ -32,7 +32,6 @@ export const Carousel: FC<Props> = ({
       <Swiper
         className="relative container"
         initialSlide={0.5}
-        loop={true}
         modules={[Pagination, Navigation, Scrollbar, Mousewheel]}
         mousewheel={true}
         navigation={{

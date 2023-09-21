@@ -3,11 +3,11 @@ import type { Metadata } from "next";
 import { cn } from "@/shared/lib/utils";
 import { Footer } from "@/widgets/footer";
 import { Header } from "@/widgets/header";
-import { Work_Sans } from "next/font/google";
+import { Rubik } from "next/font/google";
 
 import "./globals.css";
 
-const font = Work_Sans({ subsets: ["latin"] });
+const font = Rubik({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   description: "Стриминговая платформа для просмотра фильма и сериалов",
