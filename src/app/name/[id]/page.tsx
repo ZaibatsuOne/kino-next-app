@@ -1,12 +1,21 @@
 import { getActor } from "@/shared/api";
 import { AboutPerson } from "@/widgets/about-person";
 import { Filmography } from "@/widgets/filmography";
-import { NextPage } from "next";
+import { Metadata, NextPage } from "next";
 import Image from "next/image";
 
 interface Props {
   params: { id: number };
 }
+
+export const generateMetadata = async (props: Props): Promise<Metadata> => {
+  const { params } = props;
+  const actor = await getActor(params.id);
+  return {
+    title: "Disney - " + actor?.name,
+  };
+};
+
 const Name: NextPage<Props> = async (props) => {
   const { params } = props;
   const actor = await getActor(params.id);
