@@ -1,3 +1,4 @@
+import { Search } from "@/features/search";
 import { Logo } from "@/shared/ui/logo";
 import { FC } from "react";
 
@@ -11,7 +12,7 @@ export const Header: FC = () => {
         <Logo />
         <Navigation />
       </div>
-      <SearchButton />
+      <Search />
     </header>
   );
 };

@@ -42,7 +42,7 @@ export const Hero: FC<Props> = ({ movie }) => {
           </div>
           <div className="flex flex-col gap-6">
             <div className="flex gap-6">
-              <WatchFilmButton link={movie?.id} />
+              <WatchFilmButton movie={movie} />
               <InformationFilmButton movie={movie} />
             </div>
             <Description movie={movie} />

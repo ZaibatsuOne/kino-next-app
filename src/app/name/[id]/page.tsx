@@ -1,4 +1,5 @@
 import { getActor } from "@/shared/api";
+import { UndefinedPerson } from "@/shared/ui/icon/assets";
 import { AboutPerson } from "@/widgets/about-person";
 import { Filmography } from "@/widgets/filmography";
 import { Metadata, NextPage } from "next";
@@ -23,12 +24,20 @@ const Name: NextPage<Props> = async (props) => {
   return (
     <section className="container w-full mt-16">
       <div className="flex gap-10">
-        {actor?.photo && actor.name && (
+        {actor?.photo && actor?.name ? (
           <Image
             alt={actor?.name}
             className="rounded-full w-64 h-64 object-cover"
             height={600}
             src={actor?.photo}
+            width={600}
+          />
+        ) : (
+          <Image
+            alt=""
+            className="rounded-full w-64 h-64 object-cover"
+            height={600}
+            src={UndefinedPerson}
             width={600}
           />
         )}

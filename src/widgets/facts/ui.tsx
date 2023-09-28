@@ -16,7 +16,7 @@ export const Facts: FC<Props> = (props) => {
   const [openFacts, setOpenFacts] = useState<boolean>(false);
   return (
     <>
-      {movie && movie?.facts.length > 0 ? (
+      {movie && movie?.facts ? (
         <Category className="container gap-6 ">
           <header className="flex items-center gap-5">
             <CategoryTitle>Знаете ли вы, что…</CategoryTitle>

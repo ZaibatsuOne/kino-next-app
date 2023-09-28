@@ -15,9 +15,7 @@ interface Props extends PropsWithChildren {
 
 export const Category: FC<Props> = ({ children, className }) => {
   return (
-    <section className={cn("flex flex-col gap-2", className)}>
-      {children}
-    </section>
+    <section className={cn("flex flex-col", className)}>{children}</section>
   );
 };
 

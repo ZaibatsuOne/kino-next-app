@@ -6,7 +6,7 @@ export interface TitleProps extends PropsWithChildren {
 }
 export const Title: FC<TitleProps> = ({ children, className, ...props }) => {
   return (
-    <h4 {...props} className={cn("text-3xl font-bold", className)}>
+    <h4 {...props} className={cn("text-2xl font-bold", className)}>
       {children}
     </h4>
   );
