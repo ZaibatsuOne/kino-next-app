@@ -21,11 +21,10 @@ import Image from "next/image";
 import { FC } from "react";
 
 interface Props {
-  movie: MovieDtoV13;
+  movie: MovieDtoV13 | null;
 }
 export const InformationFilmButton: FC<Props> = ({ movie }) => {
   const { backdrop, isSeries } = movie;
-
   return (
     <Dialog>
       <DialogTrigger className="flex gap-1 items-center bg-none border border-white text-white font-bold rounded-lg h-10 px-4 py-2">

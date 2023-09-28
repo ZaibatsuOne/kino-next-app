@@ -24,7 +24,7 @@ export const WatchFilmButton: FC<Props> = (props) => {
   const pathanameIncludes = pathname?.includes("/movie");
   const firstVideo: undefined | Video = movie?.videos?.trailers?.[3];
   const firstVideoUrl: string | undefined = firstVideo?.url;
-  const splitUrl = firstVideoUrl?.split("/");
+  const splitUrl = firstVideoUrl?.split("/") as string[];
   const playList = splitUrl[splitUrl.length - 1];
 
   const checkPathname = () => {
